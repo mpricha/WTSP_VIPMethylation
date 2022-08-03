@@ -1,0 +1,43 @@
+The commands below were submitted to the GA Tech PACE cluster and executed in an Anacond environment.
+Programs used include fastqc/0.11.2, Trim-galore!/0.3.7, Bismark/0.18.1, bowtie2/2.3.5, SNPSplit/0.3.4 
+
+Most of these were run on for loops through the list of samples from Illumina. File names should include factors which are relevant to these loops. 
+For example:
+
+for sample in [sample list]
+do
+for region [brain regions sequenced]
+do
+[command line from below]
+done
+done
+
+---
+
+QUALITY CONTROL
+
+> fastqc -f fastq -t 2 $sample\-$region\_R1.fq.gz $sample\-$region\_R2.fq.gz
+> cutadapt --cores=8 -q 30 -O 1 -m 50 --trim-n --pair-filter any -a CTGTCTCTTATA -A CTGTCTCTTATA -o $sample\-$region\_R1.trimmed.fq.gz -p $sample\-$region\_R2.trimmed.fq.gz $sample\-$region\_R1.fastq.gz $sample\-$region\_R2.fastq.gz > $sample\-$region\.cutadapt_summary.txt && fastqc -f fastq -t 2 $sample\-$region\_R1.trimmed.fq.gz $sample\-$region\_R2.trimmed.fq.gz
+
+MAPPING
+These steps require a reference genome with all SNPs N-masked except for any CpG sites which are affected by SNPs. All polymorphic CpG sites should be included in this reference genome. In addition, the SNP list referenced for SNPsplit should match the N-masked locations of the reference genome (i.e., it should NOT include any SNPs that affect CpG sites). The result will read methylation counts from all CpG sites, including the polymorphic CpG sites on the wrong allele, and will assign reads to an allele based on the rest of the SNPs that are not distrupting CpG sites. 
+
+Sample of SNP_file:
+ID	Chr	Position	SNP Value	Ref/SNP
+1	NW_005081596.1	2257489	1	C/T
+2	NW_005081596.1	2257540	1	G/A
+3	NW_005081596.1	2257542	1	G/A
+4	NW_005081596.1	2257906	1	T/C
+5	NW_005081596.1	2257937	1	T/C
+
+We used bowtie2-build to index the reference genome for bowtie:
+> bismark_genome_preparation <path to folder with N-masked reference genome>
+
+> bismark --bowtie2 --score_min L,0,-0.6 -X 1000 --genome /nv/hp10/jmerritt34/data/prichard/Trimmed2/refseq -1 DM01-$sample\_L001_R1_001_val_1.fq -2 DM01-$sample\_L001_R2_001_val_2.fq
+> filter_non_conversion --threshold 3 DM01-$sample\_L001_R1_001_val_1_bismark_bt2_pe.bam
+> SNPsplit --paired --snp_file snpfile.txt DM01-$sample\_L001_R1_001_val_1_bismark_bt2_pe.nonCG_filtered.bam 
+
+EXTRACTING METHYLATION COUNTS (by allele)
+
+> bismark_methylation_extractor DM01-$sample\_L001_R1_001_val_1_bismark_bt2_pe.nonCG_filtered.bam
+> bismark2bedGraph CpG_OT_DM01-$sample\_L001_R1_001_val_1_bismark_bt2_pe.nonCG_filtered.txt -o $sample\_morph_3XC
