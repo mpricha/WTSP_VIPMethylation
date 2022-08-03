@@ -7,3 +7,4 @@ This data analysis can be reproduced using the R script and files included here.
 Raw bisulfite-converted DNA sequencing data is available at: 
 Raw RNA sequencing data is available at: https://www-ncbi-nlm-nih-gov.proxy.library.emory.edu/bioproject/657006
 
+The FASTA DNA file and the QC-Mapping-CallingMethylation.txt files are available to help with reproducing the quality control, read mapping, allele-assignment, and methylation count steps leading up to the .cov.gz outputs from Bismark (i.e., L48-61 of the R script). 
