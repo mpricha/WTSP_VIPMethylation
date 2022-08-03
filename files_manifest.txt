@@ -1,181 +1,181 @@
-file	well	sample	region	age	morph	sex	allele	allele.morph	nest	bird	bird2
-B4-23540_S3_genome1_allele_3XC.gz.bismark.cov.gz	B4	3	HYP	Adult	White	m	ZAL2	ZAL2-WS	A	23540	23540
-B4-23540_S3_genome2_allele_3XC.gz.bismark.cov.gz	B4	3	HYP	Adult	White	m	ZAL2m	ZAL2m-WS	A	23540	23540
-B4-23540_S3_morph_3XC.gz.bismark.cov.gz	B4	3	HYP	Adult	White	m	het	het-WS	A	23540	23540
-G11-23596_S60_genome1_allele_3XC.gz.bismark.cov.gz	G11	none	HYP	Adult	White	m	ZAL2	ZAL2-WS	B	23596	23596
-G11-23596_S60_genome2_allele_3XC.gz.bismark.cov.gz	G11	none	HYP	Adult	White	m	ZAL2m	ZAL2m-WS	B	23596	23596
-G11-23596_S60_morph_3XC.gz.bismark.cov.gz	G11	none	HYP	Adult	White	m	het	het-WS	B	23596	23596
-B2-23602_S1_genome1_allele_3XC.gz.bismark.cov.gz	B2	1	HYP	Adult	White	m	ZAL2	ZAL2-WS	G	23602	23602
-B2-23602_S1_genome2_allele_3XC.gz.bismark.cov.gz	B2	1	HYP	Adult	White	m	ZAL2m	ZAL2m-WS	G	23602	23602
-B2-23602_S1_morph_3XC.gz.bismark.cov.gz	B2	1	HYP	Adult	White	m	het	het-WS	G	23602	23602
-G5-23607_S54_genome1_allele_3XC.gz.bismark.cov.gz	G5	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	J	23607	23607
-G5-23607_S54_genome2_allele_3XC.gz.bismark.cov.gz	G5	none	HYP	Adult	Tan	m	unk	ZAL2-TS	J	23607	23607
-G5-23607_S54_morph_3XC.gz.bismark.cov.gz	G5	none	HYP	Adult	Tan	m	het	homo-TS	J	23607	23607
-B6-23608_S5_genome1_allele_3XC.gz.bismark.cov.gz	B6	5	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	M	23608	23608
-B6-23608_S5_genome2_allele_3XC.gz.bismark.cov.gz	B6	5	HYP	Adult	Tan	m	unk	ZAL2-TS	M	23608	23608
-B6-23608_S5_morph_3XC.gz.bismark.cov.gz	B6	5	HYP	Adult	Tan	m	het	homo-TS	M	23608	23608
-G6-23610_S55_genome1_allele_3XC.gz.bismark.cov.gz	G6 	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	P	23610	23610
-G6-23610_S55_genome2_allele_3XC.gz.bismark.cov.gz	G6 	none	HYP	Adult	Tan	m	unk	ZAL2-TS	P	23610	23610
-G6-23610_S55_morph_3XC.gz.bismark.cov.gz	G6 	none	HYP	Adult	Tan	m	het	homo-TS	P	23610	23610
-B11-23614_S10_genome1_allele_3XC.gz.bismark.cov.gz	B11	10	HYP	Adult	White	f	ZAL2	ZAL2-WS	S	23614	NA
-B11-23614_S10_genome2_allele_3XC.gz.bismark.cov.gz	B11	10	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	S	23614	NA
-B11-23614_S10_morph_3XC.gz.bismark.cov.gz	B11	10	HYP	Adult	White	f	het	het-WS	S	23614	NA
-G7-23615_S56_genome1_allele_3XC.gz.bismark.cov.gz	G7	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	V	23615	23615
-G7-23615_S56_genome2_allele_3XC.gz.bismark.cov.gz	G7	none	HYP	Adult	Tan	m	unk	ZAL2-TS	V	23615	23615
-G7-23615_S56_morph_3XC.gz.bismark.cov.gz	G7	none	HYP	Adult	Tan	m	het	homo-TS	V	23615	23615
-B3-23617_S2_genome1_allele_3XC.gz.bismark.cov.gz	B3	2	HYP	Adult	White	m	ZAL2	ZAL2-WS	Y	23617	23617
-B3-23617_S2_genome2_allele_3XC.gz.bismark.cov.gz	B3	2	HYP	Adult	White	m	ZAL2m	ZAL2m-WS	Y	23617	23617
-B3-23617_S2_morph_3XC.gz.bismark.cov.gz	B3	2	HYP	Adult	White	m	het	het-WS	Y	23617	23617
-G8-23620_S57_genome1_allele_3XC.gz.bismark.cov.gz	G8	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AB	23620	23620
-G8-23620_S57_genome2_allele_3XC.gz.bismark.cov.gz	G8	none	HYP	Adult	Tan	m	unk	ZAL2-TS	AB	23620	23620
-G8-23620_S57_morph_3XC.gz.bismark.cov.gz	G8	none	HYP	Adult	Tan	m	het	homo-TS	AB	23620	23620
-B7-23623_S6_genome1_allele_3XC.gz.bismark.cov.gz	B7	6	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AE	23623	23623
-B7-23623_S6_genome2_allele_3XC.gz.bismark.cov.gz	B7	6	HYP	Adult	Tan	m	unk	ZAL2-TS	AE	23623	23623
-B7-23623_S6_morph_3XC.gz.bismark.cov.gz	B7	6	HYP	Adult	Tan	m	het	homo-TS	AE	23623	23623
-B8-23626_S7_genome1_allele_3XC.gz.bismark.cov.gz	B8	7	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AH	23626	NA
-B8-23626_S7_genome2_allele_3XC.gz.bismark.cov.gz	B8	7	HYP	Adult	Tan	m	unk	ZAL2-TS	AH	23626	NA
-B8-23626_S7_morph_3XC.gz.bismark.cov.gz	B8	7	HYP	Adult	Tan	m	het	homo-TS	AH	23626	NA
-G9-23705_S58_genome1_allele_3XC.gz.bismark.cov.gz	G9	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AK	23705	NA
-G9-23705_S58_genome2_allele_3XC.gz.bismark.cov.gz	G9	none	HYP	Adult	Tan	m	unk	ZAL2-TS	AK	23705	NA
-G9-23705_S58_morph_3XC.gz.bismark.cov.gz	G9	none	HYP	Adult	Tan	m	het	homo-TS	AK	23705	NA
-G10-23711_S59_genome1_allele_3XC.gz.bismark.cov.gz	G10	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AN	23711	NA
-G10-23711_S59_genome2_allele_3XC.gz.bismark.cov.gz	G10	none	HYP	Adult	Tan	m	unk	ZAL2-TS	AN	23711	NA
-G10-23711_S59_morph_3XC.gz.bismark.cov.gz	G10	none	HYP	Adult	Tan	m	het	homo-TS	AN	23711	NA
-B5-23712_S4_genome1_allele_3XC.gz.bismark.cov.gz	B5	4	HYP	Adult	White	f	ZAL2	ZAL2-WS	AQ	23712	NA
-B5-23712_S4_genome2_allele_3XC.gz.bismark.cov.gz	B5	4	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	AQ	23712	NA
-B5-23712_S4_morph_3XC.gz.bismark.cov.gz	B5	4	HYP	Adult	White	f	het	het-WS	AQ	23712	NA
-D4-N1_S23_genome1_allele_3XC.gz.bismark.cov.gz	D4	23	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-08	C10-08-RN-N1	NA
-D4-N1_S23_genome2_allele_3XC.gz.bismark.cov.gz	D4	23	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-08	C10-08-RN-N1	NA
-D4-N1_S23_morph_3XC.gz.bismark.cov.gz	D4	23	HYPd	Chick	White	f	het	het-WS	C10-08	C10-08-RN-N1	NA
-F3-N1_S42_genome1_allele_3XC.gz.bismark.cov.gz	F3	42	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-08	C10-08-RN-N1-2	NA
-F3-N1_S42_genome2_allele_3XC.gz.bismark.cov.gz	F3	42	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-08	C10-08-RN-N1-2	NA
-F3-N1_S42_morph_3XC.gz.bismark.cov.gz	F3	42	HYPv	Chick	White	f	het	het-WS	C10-08	C10-08-RN-N1-2	NA
-D5-N1_S24_genome1_allele_3XC.gz.bismark.cov.gz	D5	24	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-01	N1-C10-01	N1-C10-01
-D5-N1_S24_genome2_allele_3XC.gz.bismark.cov.gz	D5	24	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-01	N1-C10-01	N1-C10-01
-D5-N1_S24_morph_3XC.gz.bismark.cov.gz	D5	24	HYPd	Chick	White	f	het	het-WS	C10-01	N1-C10-01	N1-C10-01
-F4-N1_S43_genome1_allele_3XC.gz.bismark.cov.gz	F4	43	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-01	N1-C10-01	N1-C10-01
-F4-N1_S43_genome2_allele_3XC.gz.bismark.cov.gz	F4	43	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-01	N1-C10-01	N1-C10-01
-F4-N1_S43_morph_3XC.gz.bismark.cov.gz	F4	43	HYPv	Chick	White	f	het	het-WS	C10-01	N1-C10-01	N1-C10-01
-D3-N1_S22_genome1_allele_3XC.gz.bismark.cov.gz	D3	22	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-10	N1-C10-10	N1-C10-10
-D3-N1_S22_genome2_allele_3XC.gz.bismark.cov.gz	D3	22	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-10	N1-C10-10	N1-C10-10
-D3-N1_S22_morph_3XC.gz.bismark.cov.gz	D3	22	HYPd	Chick	Tan	f	het	homo-TS	C10-10	N1-C10-10	N1-C10-10
-E11-N1_S40_genome1_allele_3XC.gz.bismark.cov.gz	E11	40	HYPv	Chick	Tan	f	ZAL2	ZAL2-TS	C10-10	N1-C10-10	N1-C10-10
-E11-N1_S40_genome2_allele_3XC.gz.bismark.cov.gz	E11	40	HYPv	Chick	Tan	f	unk	ZAL2-TS	C10-10	N1-C10-10	N1-C10-10
-E11-N1_S40_morph_3XC.gz.bismark.cov.gz	E11	40	HYPv	Chick	Tan	f	het	homo-TS	C10-10	N1-C10-10	N1-C10-10
-D11-N1_S30_genome1_allele_3XC.gz.bismark.cov.gz	D11	30	HYPd	Chick	Tan	m	ZAL2	ZAL2-TS	C10-12	N1-C10-12	N1-C10-12
-D11-N1_S30_genome2_allele_3XC.gz.bismark.cov.gz	D11	30	HYPd	Chick	Tan	m	unk	ZAL2-TS	C10-12	N1-C10-12	N1-C10-12
-D11-N1_S30_morph_3XC.gz.bismark.cov.gz	D11	30	HYPd	Chick	Tan	m	het	homo-TS	C10-12	N1-C10-12	N1-C10-12
-F9-N1_S48_genome1_allele_3XC.gz.bismark.cov.gz	F9	48	HYPv	Chick	Tan	m	ZAL2	ZAL2-TS	C10-12	N1-C10-12	N1-C10-12
-F9-N1_S48_genome2_allele_3XC.gz.bismark.cov.gz	F9	48	HYPv	Chick	Tan	m	unk	ZAL2-TS	C10-12	N1-C10-12	N1-C10-12
-F9-N1_S48_morph_3XC.gz.bismark.cov.gz	F9	48	HYPv	Chick	Tan	m	het	homo-TS	C10-12	N1-C10-12	N1-C10-12
-D9-N1_S28_genome1_allele_3XC.gz.bismark.cov.gz	D9	28	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-19	N1-C10-19	N1-C10-19
-D9-N1_S28_genome2_allele_3XC.gz.bismark.cov.gz	D9	28	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-19	N1-C10-19	N1-C10-19
-D9-N1_S28_morph_3XC.gz.bismark.cov.gz	D9	28	HYPd	Chick	Tan	f	het	homo-TS	C10-19	N1-C10-19	N1-C10-19
-E3-N1_S32_genome1_allele_3XC.gz.bismark.cov.gz	E3	32	HYPd	Chick	White	m	ZAL2	ZAL2-WS	C10-24	N1-C10-24	N1-C10-24
-E3-N1_S32_genome2_allele_3XC.gz.bismark.cov.gz	E3	32	HYPd	Chick	White	m	ZAL2m	ZAL2m-WS	C10-24	N1-C10-24	N1-C10-24
-E3-N1_S32_morph_3XC.gz.bismark.cov.gz	E3	32	HYPd	Chick	White	m	het	het-WS	C10-24	N1-C10-24	N1-C10-24
-G2-N1_S51_genome1_allele_3XC.gz.bismark.cov.gz	G2	51	HYPv	Chick	White	m	ZAL2	ZAL2-WS	C10-24	N1-C10-24	N1-C10-24
-G2-N1_S51_genome2_allele_3XC.gz.bismark.cov.gz	G2	51	HYPv	Chick	White	m	ZAL2m	ZAL2m-WS	C10-24	N1-C10-24	N1-C10-24
-G2-N1_S51_morph_3XC.gz.bismark.cov.gz	G2	51	HYPv	Chick	White	m	het	het-WS	C10-24	N1-C10-24	N1-C10-24
-D2-N2_S21_genome1_allele_3XC.gz.bismark.cov.gz	D2	21	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-01	N2-C10-01	N2-C10-01
-D2-N2_S21_genome2_allele_3XC.gz.bismark.cov.gz	D2	21	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-01	N2-C10-01	N2-C10-01
-D2-N2_S21_morph_3XC.gz.bismark.cov.gz	D2	21	HYPd	Chick	White	f	het	het-WS	C10-01	N2-C10-01	N2-C10-01
-F2-N2_S41_genome1_allele_3XC.gz.bismark.cov.gz	F2	41	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-01	N2-C10-01	N2-C10-01
-F2-N2_S41_genome2_allele_3XC.gz.bismark.cov.gz	F2	41	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-01	N2-C10-01	N2-C10-01
-F2-N2_S41_morph_3XC.gz.bismark.cov.gz	F2	41	HYPv	Chick	White	f	het	het-WS	C10-01	N2-C10-01	N2-C10-01
-E2-N2_S31_genome1_allele_3XC.gz.bismark.cov.gz	E2	31	HYPd	Chick	Tan	m	ZAL2	ZAL2-TS	C10-10	N2-C10-10	N2-C10-10
-E2-N2_S31_genome2_allele_3XC.gz.bismark.cov.gz	E2	31	HYPd	Chick	Tan	m	unk	ZAL2-TS	C10-10	N2-C10-10	N2-C10-10
-E2-N2_S31_morph_3XC.gz.bismark.cov.gz	E2	31	HYPd	Chick	Tan	m	het	homo-TS	C10-10	N2-C10-10	N2-C10-10
-E6-N2_S35_genome1_allele_3XC.gz.bismark.cov.gz	E6	35	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-12	N2-C10-12	N2-C10-12
-E6-N2_S35_genome2_allele_3XC.gz.bismark.cov.gz	E6	35	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-12	N2-C10-12	N2-C10-12
-E6-N2_S35_morph_3XC.gz.bismark.cov.gz	E6	35	HYPd	Chick	Tan	f	het	homo-TS	C10-12	N2-C10-12	N2-C10-12
-G4-N2_S53_genome1_allele_3XC.gz.bismark.cov.gz	G4	53	HYPv	Chick	Tan	f	ZAL2	ZAL2-TS	C10-12	N2-C10-12	N2-C10-12
-G4-N2_S53_genome2_allele_3XC.gz.bismark.cov.gz	G4	53	HYPv	Chick	Tan	f	unk	ZAL2-TS	C10-12	N2-C10-12	N2-C10-12
-G4-N2_S53_morph_3XC.gz.bismark.cov.gz	G4	53	HYPv	Chick	Tan	f	het	homo-TS	C10-12	N2-C10-12	N2-C10-12
-E7-N2_S36_genome1_allele_3XC.gz.bismark.cov.gz	E7	36	HYPd	Chick	White	m	ZAL2	ZAL2-WS	C10-19	N2-C10-19	N2-C10-19
-E7-N2_S36_genome2_allele_3XC.gz.bismark.cov.gz	E7	36	HYPd	Chick	White	m	ZAL2m	ZAL2m-WS	C10-19	N2-C10-19	N2-C10-19
-E7-N2_S36_morph_3XC.gz.bismark.cov.gz	E7	36	HYPd	Chick	White	m	het	het-WS	C10-19	N2-C10-19	N2-C10-19
-E8-N2_S37_genome1_allele_3XC.gz.bismark.cov.gz	E8	37	HYPd	Chick	White	m	ZAL2	ZAL2-WS	C10-24	N2-C10-24	N2-C10-24
-E8-N2_S37_genome2_allele_3XC.gz.bismark.cov.gz	E8	37	HYPd	Chick	White	m	ZAL2m	ZAL2m-WS	C10-24	N2-C10-24	N2-C10-24
-E8-N2_S37_morph_3XC.gz.bismark.cov.gz	E8	37	HYPd	Chick	White	m	het	het-WS	C10-24	N2-C10-24	N2-C10-24
-D6-N3_S25_genome1_allele_3XC.gz.bismark.cov.gz	D6	25	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-01	N3-C10-01	N3-C10-01
-D6-N3_S25_genome2_allele_3XC.gz.bismark.cov.gz	D6	25	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-01	N3-C10-01	N3-C10-01
-D6-N3_S25_morph_3XC.gz.bismark.cov.gz	D6	25	HYPd	Chick	Tan	f	het	homo-TS	C10-01	N3-C10-01	N3-C10-01
-F5-N3_S44_genome1_allele_3XC.gz.bismark.cov.gz	F5	44	HYPv	Chick	Tan	f	ZAL2	ZAL2-TS	C10-01	N3-C10-01	N3-C10-01
-F5-N3_S44_genome2_allele_3XC.gz.bismark.cov.gz	F5	44	HYPv	Chick	Tan	f	unk	ZAL2-TS	C10-01	N3-C10-01	N3-C10-01
-F5-N3_S44_morph_3XC.gz.bismark.cov.gz	F5	44	HYPv	Chick	Tan	f	het	homo-TS	C10-01	N3-C10-01	N3-C10-01
-E5-N3_S34_genome1_allele_3XC.gz.bismark.cov.gz	E5	34	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-10	N3-C10-10	N3-C10-10
-E5-N3_S34_genome2_allele_3XC.gz.bismark.cov.gz	E5	34	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-10	N3-C10-10	N3-C10-10
-E5-N3_S34_morph_3XC.gz.bismark.cov.gz	E5	34	HYPd	Chick	Tan	f	het	homo-TS	C10-10	N3-C10-10	N3-C10-10
-F11-N3_S50_genome1_allele_3XC.gz.bismark.cov.gz	F11	50	HYPv	Chick	Tan	f	ZAL2	ZAL2-TS	C10-10	N3-C10-10	N3-C10-10
-F11-N3_S50_genome2_allele_3XC.gz.bismark.cov.gz	F11	50	HYPv	Chick	Tan	f	unk	ZAL2-TS	C10-10	N3-C10-10	N3-C10-10
-F11-N3_S50_morph_3XC.gz.bismark.cov.gz	F11	50	HYPv	Chick	Tan	f	het	homo-TS	C10-10	N3-C10-10	N3-C10-10
-D10-N3_S29_genome1_allele_3XC.gz.bismark.cov.gz	D10	29	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-12	N3-C10-12	N3-C10-12
-D10-N3_S29_genome2_allele_3XC.gz.bismark.cov.gz	D10	29	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-12	N3-C10-12	N3-C10-12
-D10-N3_S29_morph_3XC.gz.bismark.cov.gz	D10	29	HYPd	Chick	White	f	het	het-WS	C10-12	N3-C10-12	N3-C10-12
-G3-N3_S52_genome1_allele_3XC.gz.bismark.cov.gz	G3	52	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-12	N3-C10-12	N3-C10-12
-G3-N3_S52_genome2_allele_3XC.gz.bismark.cov.gz	G3	52	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-12	N3-C10-12	N3-C10-12
-G3-N3_S52_morph_3XC.gz.bismark.cov.gz	G3	52	HYPv	Chick	White	f	het	het-WS	C10-12	N3-C10-12	N3-C10-12
-E10-N3_S39_genome1_allele_3XC.gz.bismark.cov.gz	E10	39	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-19	N3-C10-19	N2-C10-19
-E10-N3_S39_genome2_allele_3XC.gz.bismark.cov.gz	E10	39	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-19	N3-C10-19	N3-C10-19
-E10-N3_S39_morph_3XC.gz.bismark.cov.gz	E10	39	HYPd	Chick	White	f	het	het-WS	C10-19	N3-C10-19	N3-C10-19
-F8-N3_S47_genome1_allele_3XC.gz.bismark.cov.gz	F8	47	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-19	N3-C10-19	N3-C10-19
-F8-N3_S47_genome2_allele_3XC.gz.bismark.cov.gz	F8	47	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-19	N3-C10-19	N3-C10-19
-F8-N3_S47_morph_3XC.gz.bismark.cov.gz	F8	47	HYPv	Chick	White	f	het	het-WS	C10-19	N3-C10-19	N3-C10-19
-E4-N3_S33_genome1_allele_3XC.gz.bismark.cov.gz	E4	33	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-24	N3-C10-24	N3-C10-24
-E4-N3_S33_genome2_allele_3XC.gz.bismark.cov.gz	E4	33	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-24	N3-C10-24	N3-C10-24
-E4-N3_S33_morph_3XC.gz.bismark.cov.gz	E4	33	HYPd	Chick	White	f	het	het-WS	C10-24	N3-C10-24	N3-C10-24
-F10-N3_S49_genome1_allele_3XC.gz.bismark.cov.gz	F10	49	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-24	N3-C10-24	N3-C10-24
-F10-N3_S49_genome2_allele_3XC.gz.bismark.cov.gz	F10	49	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-24	N3-C10-24	N3-C10-24
-F10-N3_S49_morph_3XC.gz.bismark.cov.gz	F10	49	HYPv	Chick	White	f	het	het-WS	C10-24	N3-C10-24	N3-C10-24
-D8-N4_S27_genome1_allele_3XC.gz.bismark.cov.gz	D8	27	HYPd	Chick	Tan	m	ZAL2	ZAL2-TS	C10-01	N4-C10-01	N4-C10-01
-D8-N4_S27_genome2_allele_3XC.gz.bismark.cov.gz	D8	27	HYPd	Chick	Tan	m	unk	ZAL2-TS	C10-01	N4-C10-01	N4-C10-01
-D8-N4_S27_morph_3XC.gz.bismark.cov.gz	D8	27	HYPd	Chick	Tan	m	het	homo-TS	C10-01	N4-C10-01	N4-C10-01
-F7-N4_S46_genome1_allele_3XC.gz.bismark.cov.gz	F7	46	HYPv	Chick	Tan	m	ZAL2	ZAL2-TS	C10-01	N4-C10-01	N4-C10-01
-F7-N4_S46_genome2_allele_3XC.gz.bismark.cov.gz	F7	46	HYPv	Chick	Tan	m	unk	ZAL2-TS	C10-01	N4-C10-01	N4-C10-01
-F7-N4_S46_morph_3XC.gz.bismark.cov.gz	F7	46	HYPv	Chick	Tan	m	het	homo-TS	C10-01	N4-C10-01	N4-C10-01
-D7-N4_S26_genome1_allele_3XC.gz.bismark.cov.gz	D7	26	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-12	N4-C10-12	N4-C10-12
-D7-N4_S26_genome2_allele_3XC.gz.bismark.cov.gz	D7	26	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-12	N4-C10-12	N4-C10-12
-D7-N4_S26_morph_3XC.gz.bismark.cov.gz	D7	26	HYPd	Chick	White	f	het	het-WS	C10-12	N4-C10-12	N4-C10-12
-F6-N4_S45_genome1_allele_3XC.gz.bismark.cov.gz	F6	45	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-12	N4-C10-12	N4-C10-12
-F6-N4_S45_genome2_allele_3XC.gz.bismark.cov.gz	F6	45	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-12	N4-C10-12	N4-C10-12
-F6-N4_S45_morph_3XC.gz.bismark.cov.gz	F6	45	HYPv	Chick	White	f	het	het-WS	C10-12	N4-C10-12	N4-C10-12
-E9-N4_S38_genome1_allele_3XC.gz.bismark.cov.gz	E9	38	HYPd	Chick	White	m	ZAL2	ZAL2-WS	C10-24	N4-C10-24	N4-C10-24
-E9-N4_S38_genome2_allele_3XC.gz.bismark.cov.gz	E9	38	HYPd	Chick	White	m	ZAL2m	ZAL2m-WS	C10-24	N4-C10-24	N4-C10-24
-E9-N4_S38_morph_3XC.gz.bismark.cov.gz	E9	38	HYPd	Chick	White	m	het	het-WS	C10-24	N4-C10-24	N4-C10-24
-C9-TSF13-01_S18_genome1_allele_3XC.gz.bismark.cov.gz	C9	18	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	AT	TSF13-01	TSF13-01
-C9-TSF13-01_S18_genome2_allele_3XC.gz.bismark.cov.gz	C9	18	HYP	Adult	Tan	f	unk	ZAL2-TS	AT	TSF13-01	TSF13-01
-C9-TSF13-01_S18_morph_3XC.gz.bismark.cov.gz	C9	18	HYP	Adult	Tan	f	het	homo-TS	AT	TSF13-01	TSF13-01
-C7-TSF13-02_S16_genome1_allele_3XC.gz.bismark.cov.gz	C7	16	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	AW	TSF13-02	TSF13-02
-C7-TSF13-02_S16_genome2_allele_3XC.gz.bismark.cov.gz	C7	16	HYP	Adult	Tan	f	unk	ZAL2-TS	AW	TSF13-02	TSF13-02
-C7-TSF13-02_S16_morph_3XC.gz.bismark.cov.gz	C7	16	HYP	Adult	Tan	f	het	homo-TS	AW	TSF13-02	TSF13-02
-C3-TSF13-03_S12_genome1_allele_3XC.gz.bismark.cov.gz	C3	12	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	AZ	TSF-13-03	NA
-C3-TSF13-03_S12_genome2_allele_3XC.gz.bismark.cov.gz	C3	12	HYP	Adult	Tan	f	unk	ZAL2-TS	AZ	TSF-13-03	NA
-C3-TSF13-03_S12_morph_3XC.gz.bismark.cov.gz	C3	12	HYP	Adult	Tan	f	het	homo-TS	AZ	TSF-13-03	NA
-C4-TSF13-05_S13_genome1_allele_3XC.gz.bismark.cov.gz	C4	13	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	BC	TSF13-05	TSF13-05
-C4-TSF13-05_S13_genome2_allele_3XC.gz.bismark.cov.gz	C4	13	HYP	Adult	Tan	f	unk	ZAL2-TS	BC	TSF13-05	TSF13-05
-C4-TSF13-05_S13_morph_3XC.gz.bismark.cov.gz	C4	13	HYP	Adult	Tan	f	het	homo-TS	BC	TSF13-05	TSF13-05
-C2-TSF-13-06_S11_genome1_allele_3XC.gz.bismark.cov.gz	C2	11	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	BF	TSF13-06	TSF13-06
-C2-TSF-13-06_S11_genome2_allele_3XC.gz.bismark.cov.gz	C2	11	HYP	Adult	Tan	f	unk	ZAL2-TS	BF	TSF13-06	TSF13-06
-C2-TSF-13-06_S11_morph_3XC.gz.bismark.cov.gz	C2	11	HYP	Adult	Tan	f	het	homo-TS	BF	TSF13-06	TSF13-06
-C5-WSF13-05_S14_genome1_allele_3XC.gz.bismark.cov.gz	C5	14	HYP	Adult	White	f	ZAL2	ZAL2-WS	BI	WSF-13-05	WSF13-05
-C10-WSF13-02_S19_genome1_allele_3XC.gz.bismark.cov.gz	C10	19	HYP	Adult	White	f	ZAL2	ZAL2-WS	BI	WSF13-02	WSF13-02
-C10-WSF13-02_S19_genome2_allele_3XC.gz.bismark.cov.gz	C10	19	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BI	WSF13-02	WSF13-02
-C10-WSF13-02_S19_morph_3XC.gz.bismark.cov.gz	C10	19	HYP	Adult	White	f	het	het-WS	BL	WSF13-02	WSF13-02
-C8-WSF13-03_S17_genome1_allele_3XC.gz.bismark.cov.gz	C8	17	HYP	Adult	White	f	ZAL2	ZAL2-WS	BL	WSF13-03	WSF13-03
-C8-WSF13-03_S17_genome2_allele_3XC.gz.bismark.cov.gz	C8	17	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BL	WSF13-03	WSF13-03
-C8-WSF13-03_S17_morph_3XC.gz.bismark.cov.gz	C8	17	HYP	Adult	White	f	het	het-WS	BO	WSF13-03	WSF13-03
-C6-WSF13-04_S15_genome1_allele_3XC.gz.bismark.cov.gz	C6	15	HYP	Adult	White	f	ZAL2	ZAL2-WS	BO	WSF13-04	NA
-C6-WSF13-04_S15_genome2_allele_3XC.gz.bismark.cov.gz	C6	15	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BO	WSF13-04	NA
-C6-WSF13-04_S15_morph_3XC.gz.bismark.cov.gz	C6	15	HYP	Adult	White	f	het	het-WS	BR	WSF13-04	NA
-C5-WSF13-05_S14_genome2_allele_3XC.gz.bismark.cov.gz	C5	14	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BR	WSF-13-05	WSF13-05
-C5-WSF13-05_S14_morph_3XC.gz.bismark.cov.gz	C5	14	HYP	Adult	White	f	het	het-WS	BR	WSF-13-05	WSF13-05
-B9-WSF13-06_S8_morph_3XC.gz.bismark.cov.gz	B9	8	HYP	Adult	White	f	het	het-WS	BU	WSF13-06	WSF13-06
-B9-WSF13-06_S8_genome1_allele_3XC.gz.bismark.cov.gz	B9	8	HYP	Adult	White	f	ZAL2	ZAL2-WS	BU	WSF13-06	WSF13-06
-B9-WSF13-06_S8_genome2_allele_3XC.gz.bismark.cov.gz	B9	8	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BU	WSF13-06	WSF13-06
-C11-WSF13-07_S20_genome1_allele_3XC.gz.bismark.cov.gz	C11	20	HYP	Adult	White	f	ZAL2	ZAL2-WS	BX	WSF13-07	WSF13-07
-C11-WSF13-07_S20_genome2_allele_3XC.gz.bismark.cov.gz	C11	20	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BX	WSF13-07	WSF13-07
-C11-WSF13-07_S20_morph_3XC.gz.bismark.cov.gz	C11	20	HYP	Adult	White	f	het	het-WS	BX	WSF13-07	WSF13-07
-B10-WSF13-08_S9_genome1_allele_3XC.gz.bismark.cov.gz	B10	9	HYP	Adult	White	f	ZAL2	ZAL2-WS	CA	WSF13-08	WSF13-08
-B10-WSF13-08_S9_genome2_allele_3XC.gz.bismark.cov.gz	B10	9	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	CA	WSF13-08	WSF13-08
-B10-WSF13-08_S9_morph_3XC.gz.bismark.cov.gz	B10	9	HYP	Adult	White	f	het	het-WS	CA	WSF13-08	WSF13-08
+file	well	sample	region	age	morph	sex	allele	allele.morph	nest	bird
+B4-23540_S3_genome1_allele_3XC.gz.bismark.cov.gz	B4	3	HYP	Adult	White	m	ZAL2	ZAL2-WS	A	23540
+B4-23540_S3_genome2_allele_3XC.gz.bismark.cov.gz	B4	3	HYP	Adult	White	m	ZAL2m	ZAL2m-WS	A	23540
+B4-23540_S3_morph_3XC.gz.bismark.cov.gz	B4	3	HYP	Adult	White	m	het	het-WS	A	23540
+G11-23596_S60_genome1_allele_3XC.gz.bismark.cov.gz	G11	none	HYP	Adult	White	m	ZAL2	ZAL2-WS	B	23596
+G11-23596_S60_genome2_allele_3XC.gz.bismark.cov.gz	G11	none	HYP	Adult	White	m	ZAL2m	ZAL2m-WS	B	23596
+G11-23596_S60_morph_3XC.gz.bismark.cov.gz	G11	none	HYP	Adult	White	m	het	het-WS	B	23596
+B2-23602_S1_genome1_allele_3XC.gz.bismark.cov.gz	B2	1	HYP	Adult	White	m	ZAL2	ZAL2-WS	G	23602
+B2-23602_S1_genome2_allele_3XC.gz.bismark.cov.gz	B2	1	HYP	Adult	White	m	ZAL2m	ZAL2m-WS	G	23602
+B2-23602_S1_morph_3XC.gz.bismark.cov.gz	B2	1	HYP	Adult	White	m	het	het-WS	G	23602
+G5-23607_S54_genome1_allele_3XC.gz.bismark.cov.gz	G5	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	J	23607
+G5-23607_S54_genome2_allele_3XC.gz.bismark.cov.gz	G5	none	HYP	Adult	Tan	m	unk	ZAL2-TS	J	23607
+G5-23607_S54_morph_3XC.gz.bismark.cov.gz	G5	none	HYP	Adult	Tan	m	het	homo-TS	J	23607
+B6-23608_S5_genome1_allele_3XC.gz.bismark.cov.gz	B6	5	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	M	23608
+B6-23608_S5_genome2_allele_3XC.gz.bismark.cov.gz	B6	5	HYP	Adult	Tan	m	unk	ZAL2-TS	M	23608
+B6-23608_S5_morph_3XC.gz.bismark.cov.gz	B6	5	HYP	Adult	Tan	m	het	homo-TS	M	23608
+G6-23610_S55_genome1_allele_3XC.gz.bismark.cov.gz	G6 	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	P	23610
+G6-23610_S55_genome2_allele_3XC.gz.bismark.cov.gz	G6 	none	HYP	Adult	Tan	m	unk	ZAL2-TS	P	23610
+G6-23610_S55_morph_3XC.gz.bismark.cov.gz	G6 	none	HYP	Adult	Tan	m	het	homo-TS	P	23610
+B11-23614_S10_genome1_allele_3XC.gz.bismark.cov.gz	B11	10	HYP	Adult	White	f	ZAL2	ZAL2-WS	S	23614
+B11-23614_S10_genome2_allele_3XC.gz.bismark.cov.gz	B11	10	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	S	23614
+B11-23614_S10_morph_3XC.gz.bismark.cov.gz	B11	10	HYP	Adult	White	f	het	het-WS	S	23614
+G7-23615_S56_genome1_allele_3XC.gz.bismark.cov.gz	G7	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	V	23615
+G7-23615_S56_genome2_allele_3XC.gz.bismark.cov.gz	G7	none	HYP	Adult	Tan	m	unk	ZAL2-TS	V	23615
+G7-23615_S56_morph_3XC.gz.bismark.cov.gz	G7	none	HYP	Adult	Tan	m	het	homo-TS	V	23615
+B3-23617_S2_genome1_allele_3XC.gz.bismark.cov.gz	B3	2	HYP	Adult	White	m	ZAL2	ZAL2-WS	Y	23617
+B3-23617_S2_genome2_allele_3XC.gz.bismark.cov.gz	B3	2	HYP	Adult	White	m	ZAL2m	ZAL2m-WS	Y	23617
+B3-23617_S2_morph_3XC.gz.bismark.cov.gz	B3	2	HYP	Adult	White	m	het	het-WS	Y	23617
+G8-23620_S57_genome1_allele_3XC.gz.bismark.cov.gz	G8	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AB	23620
+G8-23620_S57_genome2_allele_3XC.gz.bismark.cov.gz	G8	none	HYP	Adult	Tan	m	unk	ZAL2-TS	AB	23620
+G8-23620_S57_morph_3XC.gz.bismark.cov.gz	G8	none	HYP	Adult	Tan	m	het	homo-TS	AB	23620
+B7-23623_S6_genome1_allele_3XC.gz.bismark.cov.gz	B7	6	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AE	23623
+B7-23623_S6_genome2_allele_3XC.gz.bismark.cov.gz	B7	6	HYP	Adult	Tan	m	unk	ZAL2-TS	AE	23623
+B7-23623_S6_morph_3XC.gz.bismark.cov.gz	B7	6	HYP	Adult	Tan	m	het	homo-TS	AE	23623
+B8-23626_S7_genome1_allele_3XC.gz.bismark.cov.gz	B8	7	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AH	23626
+B8-23626_S7_genome2_allele_3XC.gz.bismark.cov.gz	B8	7	HYP	Adult	Tan	m	unk	ZAL2-TS	AH	23626
+B8-23626_S7_morph_3XC.gz.bismark.cov.gz	B8	7	HYP	Adult	Tan	m	het	homo-TS	AH	23626
+G9-23705_S58_genome1_allele_3XC.gz.bismark.cov.gz	G9	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AK	23705
+G9-23705_S58_genome2_allele_3XC.gz.bismark.cov.gz	G9	none	HYP	Adult	Tan	m	unk	ZAL2-TS	AK	23705
+G9-23705_S58_morph_3XC.gz.bismark.cov.gz	G9	none	HYP	Adult	Tan	m	het	homo-TS	AK	23705
+G10-23711_S59_genome1_allele_3XC.gz.bismark.cov.gz	G10	none	HYP	Adult	Tan	m	ZAL2	ZAL2-TS	AN	23711
+G10-23711_S59_genome2_allele_3XC.gz.bismark.cov.gz	G10	none	HYP	Adult	Tan	m	unk	ZAL2-TS	AN	23711
+G10-23711_S59_morph_3XC.gz.bismark.cov.gz	G10	none	HYP	Adult	Tan	m	het	homo-TS	AN	23711
+B5-23712_S4_genome1_allele_3XC.gz.bismark.cov.gz	B5	4	HYP	Adult	White	f	ZAL2	ZAL2-WS	AQ	23712
+B5-23712_S4_genome2_allele_3XC.gz.bismark.cov.gz	B5	4	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	AQ	23712
+B5-23712_S4_morph_3XC.gz.bismark.cov.gz	B5	4	HYP	Adult	White	f	het	het-WS	AQ	23712
+D4-N1_S23_genome1_allele_3XC.gz.bismark.cov.gz	D4	23	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-08	C10-08-RN-N1
+D4-N1_S23_genome2_allele_3XC.gz.bismark.cov.gz	D4	23	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-08	C10-08-RN-N1
+D4-N1_S23_morph_3XC.gz.bismark.cov.gz	D4	23	HYPd	Chick	White	f	het	het-WS	C10-08	C10-08-RN-N1
+F3-N1_S42_genome1_allele_3XC.gz.bismark.cov.gz	F3	42	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-08	C10-08-RN-N1-2
+F3-N1_S42_genome2_allele_3XC.gz.bismark.cov.gz	F3	42	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-08	C10-08-RN-N1-2
+F3-N1_S42_morph_3XC.gz.bismark.cov.gz	F3	42	HYPv	Chick	White	f	het	het-WS	C10-08	C10-08-RN-N1-2
+D5-N1_S24_genome1_allele_3XC.gz.bismark.cov.gz	D5	24	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-01	N1-C10-01
+D5-N1_S24_genome2_allele_3XC.gz.bismark.cov.gz	D5	24	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-01	N1-C10-01
+D5-N1_S24_morph_3XC.gz.bismark.cov.gz	D5	24	HYPd	Chick	White	f	het	het-WS	C10-01	N1-C10-01
+F4-N1_S43_genome1_allele_3XC.gz.bismark.cov.gz	F4	43	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-01	N1-C10-01
+F4-N1_S43_genome2_allele_3XC.gz.bismark.cov.gz	F4	43	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-01	N1-C10-01
+F4-N1_S43_morph_3XC.gz.bismark.cov.gz	F4	43	HYPv	Chick	White	f	het	het-WS	C10-01	N1-C10-01
+D3-N1_S22_genome1_allele_3XC.gz.bismark.cov.gz	D3	22	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-10	N1-C10-10
+D3-N1_S22_genome2_allele_3XC.gz.bismark.cov.gz	D3	22	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-10	N1-C10-10
+D3-N1_S22_morph_3XC.gz.bismark.cov.gz	D3	22	HYPd	Chick	Tan	f	het	homo-TS	C10-10	N1-C10-10
+E11-N1_S40_genome1_allele_3XC.gz.bismark.cov.gz	E11	40	HYPv	Chick	Tan	f	ZAL2	ZAL2-TS	C10-10	N1-C10-10
+E11-N1_S40_genome2_allele_3XC.gz.bismark.cov.gz	E11	40	HYPv	Chick	Tan	f	unk	ZAL2-TS	C10-10	N1-C10-10
+E11-N1_S40_morph_3XC.gz.bismark.cov.gz	E11	40	HYPv	Chick	Tan	f	het	homo-TS	C10-10	N1-C10-10
+D11-N1_S30_genome1_allele_3XC.gz.bismark.cov.gz	D11	30	HYPd	Chick	Tan	m	ZAL2	ZAL2-TS	C10-12	N1-C10-12
+D11-N1_S30_genome2_allele_3XC.gz.bismark.cov.gz	D11	30	HYPd	Chick	Tan	m	unk	ZAL2-TS	C10-12	N1-C10-12
+D11-N1_S30_morph_3XC.gz.bismark.cov.gz	D11	30	HYPd	Chick	Tan	m	het	homo-TS	C10-12	N1-C10-12
+F9-N1_S48_genome1_allele_3XC.gz.bismark.cov.gz	F9	48	HYPv	Chick	Tan	m	ZAL2	ZAL2-TS	C10-12	N1-C10-12
+F9-N1_S48_genome2_allele_3XC.gz.bismark.cov.gz	F9	48	HYPv	Chick	Tan	m	unk	ZAL2-TS	C10-12	N1-C10-12
+F9-N1_S48_morph_3XC.gz.bismark.cov.gz	F9	48	HYPv	Chick	Tan	m	het	homo-TS	C10-12	N1-C10-12
+D9-N1_S28_genome1_allele_3XC.gz.bismark.cov.gz	D9	28	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-19	N1-C10-19
+D9-N1_S28_genome2_allele_3XC.gz.bismark.cov.gz	D9	28	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-19	N1-C10-19
+D9-N1_S28_morph_3XC.gz.bismark.cov.gz	D9	28	HYPd	Chick	Tan	f	het	homo-TS	C10-19	N1-C10-19
+E3-N1_S32_genome1_allele_3XC.gz.bismark.cov.gz	E3	32	HYPd	Chick	White	m	ZAL2	ZAL2-WS	C10-24	N1-C10-24
+E3-N1_S32_genome2_allele_3XC.gz.bismark.cov.gz	E3	32	HYPd	Chick	White	m	ZAL2m	ZAL2m-WS	C10-24	N1-C10-24
+E3-N1_S32_morph_3XC.gz.bismark.cov.gz	E3	32	HYPd	Chick	White	m	het	het-WS	C10-24	N1-C10-24
+G2-N1_S51_genome1_allele_3XC.gz.bismark.cov.gz	G2	51	HYPv	Chick	White	m	ZAL2	ZAL2-WS	C10-24	N1-C10-24
+G2-N1_S51_genome2_allele_3XC.gz.bismark.cov.gz	G2	51	HYPv	Chick	White	m	ZAL2m	ZAL2m-WS	C10-24	N1-C10-24
+G2-N1_S51_morph_3XC.gz.bismark.cov.gz	G2	51	HYPv	Chick	White	m	het	het-WS	C10-24	N1-C10-24
+D2-N2_S21_genome1_allele_3XC.gz.bismark.cov.gz	D2	21	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-01	N2-C10-01
+D2-N2_S21_genome2_allele_3XC.gz.bismark.cov.gz	D2	21	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-01	N2-C10-01
+D2-N2_S21_morph_3XC.gz.bismark.cov.gz	D2	21	HYPd	Chick	White	f	het	het-WS	C10-01	N2-C10-01
+F2-N2_S41_genome1_allele_3XC.gz.bismark.cov.gz	F2	41	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-01	N2-C10-01
+F2-N2_S41_genome2_allele_3XC.gz.bismark.cov.gz	F2	41	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-01	N2-C10-01
+F2-N2_S41_morph_3XC.gz.bismark.cov.gz	F2	41	HYPv	Chick	White	f	het	het-WS	C10-01	N2-C10-01
+E2-N2_S31_genome1_allele_3XC.gz.bismark.cov.gz	E2	31	HYPd	Chick	Tan	m	ZAL2	ZAL2-TS	C10-10	N2-C10-10
+E2-N2_S31_genome2_allele_3XC.gz.bismark.cov.gz	E2	31	HYPd	Chick	Tan	m	unk	ZAL2-TS	C10-10	N2-C10-10
+E2-N2_S31_morph_3XC.gz.bismark.cov.gz	E2	31	HYPd	Chick	Tan	m	het	homo-TS	C10-10	N2-C10-10
+E6-N2_S35_genome1_allele_3XC.gz.bismark.cov.gz	E6	35	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-12	N2-C10-12
+E6-N2_S35_genome2_allele_3XC.gz.bismark.cov.gz	E6	35	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-12	N2-C10-12
+E6-N2_S35_morph_3XC.gz.bismark.cov.gz	E6	35	HYPd	Chick	Tan	f	het	homo-TS	C10-12	N2-C10-12
+G4-N2_S53_genome1_allele_3XC.gz.bismark.cov.gz	G4	53	HYPv	Chick	Tan	f	ZAL2	ZAL2-TS	C10-12	N2-C10-12
+G4-N2_S53_genome2_allele_3XC.gz.bismark.cov.gz	G4	53	HYPv	Chick	Tan	f	unk	ZAL2-TS	C10-12	N2-C10-12
+G4-N2_S53_morph_3XC.gz.bismark.cov.gz	G4	53	HYPv	Chick	Tan	f	het	homo-TS	C10-12	N2-C10-12
+E7-N2_S36_genome1_allele_3XC.gz.bismark.cov.gz	E7	36	HYPd	Chick	White	m	ZAL2	ZAL2-WS	C10-19	N2-C10-19
+E7-N2_S36_genome2_allele_3XC.gz.bismark.cov.gz	E7	36	HYPd	Chick	White	m	ZAL2m	ZAL2m-WS	C10-19	N2-C10-19
+E7-N2_S36_morph_3XC.gz.bismark.cov.gz	E7	36	HYPd	Chick	White	m	het	het-WS	C10-19	N2-C10-19
+E8-N2_S37_genome1_allele_3XC.gz.bismark.cov.gz	E8	37	HYPd	Chick	White	m	ZAL2	ZAL2-WS	C10-24	N2-C10-24
+E8-N2_S37_genome2_allele_3XC.gz.bismark.cov.gz	E8	37	HYPd	Chick	White	m	ZAL2m	ZAL2m-WS	C10-24	N2-C10-24
+E8-N2_S37_morph_3XC.gz.bismark.cov.gz	E8	37	HYPd	Chick	White	m	het	het-WS	C10-24	N2-C10-24
+D6-N3_S25_genome1_allele_3XC.gz.bismark.cov.gz	D6	25	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-01	N3-C10-01
+D6-N3_S25_genome2_allele_3XC.gz.bismark.cov.gz	D6	25	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-01	N3-C10-01
+D6-N3_S25_morph_3XC.gz.bismark.cov.gz	D6	25	HYPd	Chick	Tan	f	het	homo-TS	C10-01	N3-C10-01
+F5-N3_S44_genome1_allele_3XC.gz.bismark.cov.gz	F5	44	HYPv	Chick	Tan	f	ZAL2	ZAL2-TS	C10-01	N3-C10-01
+F5-N3_S44_genome2_allele_3XC.gz.bismark.cov.gz	F5	44	HYPv	Chick	Tan	f	unk	ZAL2-TS	C10-01	N3-C10-01
+F5-N3_S44_morph_3XC.gz.bismark.cov.gz	F5	44	HYPv	Chick	Tan	f	het	homo-TS	C10-01	N3-C10-01
+E5-N3_S34_genome1_allele_3XC.gz.bismark.cov.gz	E5	34	HYPd	Chick	Tan	f	ZAL2	ZAL2-TS	C10-10	N3-C10-10
+E5-N3_S34_genome2_allele_3XC.gz.bismark.cov.gz	E5	34	HYPd	Chick	Tan	f	unk	ZAL2-TS	C10-10	N3-C10-10
+E5-N3_S34_morph_3XC.gz.bismark.cov.gz	E5	34	HYPd	Chick	Tan	f	het	homo-TS	C10-10	N3-C10-10
+F11-N3_S50_genome1_allele_3XC.gz.bismark.cov.gz	F11	50	HYPv	Chick	Tan	f	ZAL2	ZAL2-TS	C10-10	N3-C10-10
+F11-N3_S50_genome2_allele_3XC.gz.bismark.cov.gz	F11	50	HYPv	Chick	Tan	f	unk	ZAL2-TS	C10-10	N3-C10-10
+F11-N3_S50_morph_3XC.gz.bismark.cov.gz	F11	50	HYPv	Chick	Tan	f	het	homo-TS	C10-10	N3-C10-10
+D10-N3_S29_genome1_allele_3XC.gz.bismark.cov.gz	D10	29	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-12	N3-C10-12
+D10-N3_S29_genome2_allele_3XC.gz.bismark.cov.gz	D10	29	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-12	N3-C10-12
+D10-N3_S29_morph_3XC.gz.bismark.cov.gz	D10	29	HYPd	Chick	White	f	het	het-WS	C10-12	N3-C10-12
+G3-N3_S52_genome1_allele_3XC.gz.bismark.cov.gz	G3	52	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-12	N3-C10-12
+G3-N3_S52_genome2_allele_3XC.gz.bismark.cov.gz	G3	52	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-12	N3-C10-12
+G3-N3_S52_morph_3XC.gz.bismark.cov.gz	G3	52	HYPv	Chick	White	f	het	het-WS	C10-12	N3-C10-12
+E10-N3_S39_genome1_allele_3XC.gz.bismark.cov.gz	E10	39	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-19	N3-C10-19
+E10-N3_S39_genome2_allele_3XC.gz.bismark.cov.gz	E10	39	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-19	N3-C10-19
+E10-N3_S39_morph_3XC.gz.bismark.cov.gz	E10	39	HYPd	Chick	White	f	het	het-WS	C10-19	N3-C10-19
+F8-N3_S47_genome1_allele_3XC.gz.bismark.cov.gz	F8	47	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-19	N3-C10-19
+F8-N3_S47_genome2_allele_3XC.gz.bismark.cov.gz	F8	47	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-19	N3-C10-19
+F8-N3_S47_morph_3XC.gz.bismark.cov.gz	F8	47	HYPv	Chick	White	f	het	het-WS	C10-19	N3-C10-19
+E4-N3_S33_genome1_allele_3XC.gz.bismark.cov.gz	E4	33	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-24	N3-C10-24
+E4-N3_S33_genome2_allele_3XC.gz.bismark.cov.gz	E4	33	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-24	N3-C10-24
+E4-N3_S33_morph_3XC.gz.bismark.cov.gz	E4	33	HYPd	Chick	White	f	het	het-WS	C10-24	N3-C10-24
+F10-N3_S49_genome1_allele_3XC.gz.bismark.cov.gz	F10	49	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-24	N3-C10-24
+F10-N3_S49_genome2_allele_3XC.gz.bismark.cov.gz	F10	49	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-24	N3-C10-24
+F10-N3_S49_morph_3XC.gz.bismark.cov.gz	F10	49	HYPv	Chick	White	f	het	het-WS	C10-24	N3-C10-24
+D8-N4_S27_genome1_allele_3XC.gz.bismark.cov.gz	D8	27	HYPd	Chick	Tan	m	ZAL2	ZAL2-TS	C10-01	N4-C10-01
+D8-N4_S27_genome2_allele_3XC.gz.bismark.cov.gz	D8	27	HYPd	Chick	Tan	m	unk	ZAL2-TS	C10-01	N4-C10-01
+D8-N4_S27_morph_3XC.gz.bismark.cov.gz	D8	27	HYPd	Chick	Tan	m	het	homo-TS	C10-01	N4-C10-01
+F7-N4_S46_genome1_allele_3XC.gz.bismark.cov.gz	F7	46	HYPv	Chick	Tan	m	ZAL2	ZAL2-TS	C10-01	N4-C10-01
+F7-N4_S46_genome2_allele_3XC.gz.bismark.cov.gz	F7	46	HYPv	Chick	Tan	m	unk	ZAL2-TS	C10-01	N4-C10-01
+F7-N4_S46_morph_3XC.gz.bismark.cov.gz	F7	46	HYPv	Chick	Tan	m	het	homo-TS	C10-01	N4-C10-01
+D7-N4_S26_genome1_allele_3XC.gz.bismark.cov.gz	D7	26	HYPd	Chick	White	f	ZAL2	ZAL2-WS	C10-12	N4-C10-12
+D7-N4_S26_genome2_allele_3XC.gz.bismark.cov.gz	D7	26	HYPd	Chick	White	f	ZAL2m	ZAL2m-WS	C10-12	N4-C10-12
+D7-N4_S26_morph_3XC.gz.bismark.cov.gz	D7	26	HYPd	Chick	White	f	het	het-WS	C10-12	N4-C10-12
+F6-N4_S45_genome1_allele_3XC.gz.bismark.cov.gz	F6	45	HYPv	Chick	White	f	ZAL2	ZAL2-WS	C10-12	N4-C10-12
+F6-N4_S45_genome2_allele_3XC.gz.bismark.cov.gz	F6	45	HYPv	Chick	White	f	ZAL2m	ZAL2m-WS	C10-12	N4-C10-12
+F6-N4_S45_morph_3XC.gz.bismark.cov.gz	F6	45	HYPv	Chick	White	f	het	het-WS	C10-12	N4-C10-12
+E9-N4_S38_genome1_allele_3XC.gz.bismark.cov.gz	E9	38	HYPd	Chick	White	m	ZAL2	ZAL2-WS	C10-24	N4-C10-24
+E9-N4_S38_genome2_allele_3XC.gz.bismark.cov.gz	E9	38	HYPd	Chick	White	m	ZAL2m	ZAL2m-WS	C10-24	N4-C10-24
+E9-N4_S38_morph_3XC.gz.bismark.cov.gz	E9	38	HYPd	Chick	White	m	het	het-WS	C10-24	N4-C10-24
+C9-TSF13-01_S18_genome1_allele_3XC.gz.bismark.cov.gz	C9	18	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	AT	TSF13-01
+C9-TSF13-01_S18_genome2_allele_3XC.gz.bismark.cov.gz	C9	18	HYP	Adult	Tan	f	unk	ZAL2-TS	AT	TSF13-01
+C9-TSF13-01_S18_morph_3XC.gz.bismark.cov.gz	C9	18	HYP	Adult	Tan	f	het	homo-TS	AT	TSF13-01
+C7-TSF13-02_S16_genome1_allele_3XC.gz.bismark.cov.gz	C7	16	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	AW	TSF13-02
+C7-TSF13-02_S16_genome2_allele_3XC.gz.bismark.cov.gz	C7	16	HYP	Adult	Tan	f	unk	ZAL2-TS	AW	TSF13-02
+C7-TSF13-02_S16_morph_3XC.gz.bismark.cov.gz	C7	16	HYP	Adult	Tan	f	het	homo-TS	AW	TSF13-02
+C3-TSF13-03_S12_genome1_allele_3XC.gz.bismark.cov.gz	C3	12	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	AZ	TSF-13-03
+C3-TSF13-03_S12_genome2_allele_3XC.gz.bismark.cov.gz	C3	12	HYP	Adult	Tan	f	unk	ZAL2-TS	AZ	TSF-13-03
+C3-TSF13-03_S12_morph_3XC.gz.bismark.cov.gz	C3	12	HYP	Adult	Tan	f	het	homo-TS	AZ	TSF-13-03
+C4-TSF13-05_S13_genome1_allele_3XC.gz.bismark.cov.gz	C4	13	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	BC	TSF13-05
+C4-TSF13-05_S13_genome2_allele_3XC.gz.bismark.cov.gz	C4	13	HYP	Adult	Tan	f	unk	ZAL2-TS	BC	TSF13-05
+C4-TSF13-05_S13_morph_3XC.gz.bismark.cov.gz	C4	13	HYP	Adult	Tan	f	het	homo-TS	BC	TSF13-05
+C2-TSF-13-06_S11_genome1_allele_3XC.gz.bismark.cov.gz	C2	11	HYP	Adult	Tan	f	ZAL2	ZAL2-TS	BF	TSF13-06
+C2-TSF-13-06_S11_genome2_allele_3XC.gz.bismark.cov.gz	C2	11	HYP	Adult	Tan	f	unk	ZAL2-TS	BF	TSF13-06
+C2-TSF-13-06_S11_morph_3XC.gz.bismark.cov.gz	C2	11	HYP	Adult	Tan	f	het	homo-TS	BF	TSF13-06
+C5-WSF13-05_S14_genome1_allele_3XC.gz.bismark.cov.gz	C5	14	HYP	Adult	White	f	ZAL2	ZAL2-WS	BI	WSF-13-05
+C10-WSF13-02_S19_genome1_allele_3XC.gz.bismark.cov.gz	C10	19	HYP	Adult	White	f	ZAL2	ZAL2-WS	BI	WSF13-02
+C10-WSF13-02_S19_genome2_allele_3XC.gz.bismark.cov.gz	C10	19	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BI	WSF13-02
+C10-WSF13-02_S19_morph_3XC.gz.bismark.cov.gz	C10	19	HYP	Adult	White	f	het	het-WS	BL	WSF13-02
+C8-WSF13-03_S17_genome1_allele_3XC.gz.bismark.cov.gz	C8	17	HYP	Adult	White	f	ZAL2	ZAL2-WS	BL	WSF13-03
+C8-WSF13-03_S17_genome2_allele_3XC.gz.bismark.cov.gz	C8	17	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BL	WSF13-03
+C8-WSF13-03_S17_morph_3XC.gz.bismark.cov.gz	C8	17	HYP	Adult	White	f	het	het-WS	BO	WSF13-03
+C6-WSF13-04_S15_genome1_allele_3XC.gz.bismark.cov.gz	C6	15	HYP	Adult	White	f	ZAL2	ZAL2-WS	BO	WSF13-04
+C6-WSF13-04_S15_genome2_allele_3XC.gz.bismark.cov.gz	C6	15	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BO	WSF13-04
+C6-WSF13-04_S15_morph_3XC.gz.bismark.cov.gz	C6	15	HYP	Adult	White	f	het	het-WS	BR	WSF13-04
+C5-WSF13-05_S14_genome2_allele_3XC.gz.bismark.cov.gz	C5	14	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BR	WSF-13-05
+C5-WSF13-05_S14_morph_3XC.gz.bismark.cov.gz	C5	14	HYP	Adult	White	f	het	het-WS	BR	WSF-13-05
+B9-WSF13-06_S8_morph_3XC.gz.bismark.cov.gz	B9	8	HYP	Adult	White	f	het	het-WS	BU	WSF13-06
+B9-WSF13-06_S8_genome1_allele_3XC.gz.bismark.cov.gz	B9	8	HYP	Adult	White	f	ZAL2	ZAL2-WS	BU	WSF13-06
+B9-WSF13-06_S8_genome2_allele_3XC.gz.bismark.cov.gz	B9	8	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BU	WSF13-06
+C11-WSF13-07_S20_genome1_allele_3XC.gz.bismark.cov.gz	C11	20	HYP	Adult	White	f	ZAL2	ZAL2-WS	BX	WSF13-07
+C11-WSF13-07_S20_genome2_allele_3XC.gz.bismark.cov.gz	C11	20	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	BX	WSF13-07
+C11-WSF13-07_S20_morph_3XC.gz.bismark.cov.gz	C11	20	HYP	Adult	White	f	het	het-WS	BX	WSF13-07
+B10-WSF13-08_S9_genome1_allele_3XC.gz.bismark.cov.gz	B10	9	HYP	Adult	White	f	ZAL2	ZAL2-WS	CA	WSF13-08
+B10-WSF13-08_S9_genome2_allele_3XC.gz.bismark.cov.gz	B10	9	HYP	Adult	White	f	ZAL2m	ZAL2m-WS	CA	WSF13-08
+B10-WSF13-08_S9_morph_3XC.gz.bismark.cov.gz	B10	9	HYP	Adult	White	f	het	het-WS	CA	WSF13-08
