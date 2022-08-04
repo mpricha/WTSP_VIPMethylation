@@ -1,7 +1,7 @@
 
 ####Methylation data analysis
 ####Prichard, M.R.
-####Last updated: 20220802
+####Last updated: 20220803
 
 ### General goals: 
 ### Differences in methylation
@@ -212,7 +212,7 @@ dfcg <- subset(dfcg, bird != "WSF13-04") #this bird seems to have been mis-label
 #log transformation
 #adding a small constant to all of the values so there are no zeros 
 #for the log transformation, constant is half of smallest value in df
-dfcg$per.meth1 <- log(dfcg$per.meth+min(dfcg$per.meth[dfcg$per.meth > 0])/2) 
+dfcg$per.meth1 <- log(dfcg$per.meth+round(min(dfcg$per.meth[dfcg$per.meth > 0])/2), 6) 
 hist(dfcg$per.meth1,breaks=100)
 skewness(dfcg$per.meth1)
 
@@ -1146,7 +1146,7 @@ FIG_adult.boxes <-
   arrangeGrob(FIG_allele.a, FIG_allele.sharedcpga, FIG_allele.zal2.cpga, FIG_allele.zal2m.cpga,
             ncol = 10, nrow = 3,
             layout_matrix = rbind(c(1,1,1,1,1,1,1,NA,NA,NA), c(2,2,2,2,2,2,2,2,2,2), c(3,3,3,3,4,4,4,4,4,4))) %>% 
-  as_ggplot() + draw_plot_label(label = c("A", "B", "C","d"), size = 15, x = c(0, 0, 0, .4), y = c(1, 0.6667, 0.328, 0.328)) # Add labels 
+  as_ggplot() + draw_plot_label(label = c("A", "B", "C","D"), size = 15, x = c(0, 0, 0, .4), y = c(1, 0.6667, 0.328, 0.328)) # Add labels 
   
 ggsave("FIG_adultbox.tiff", plot = FIG_adult.boxes, units="in", width=6.5, height=8.25, dpi=300, compression = 'lzw')
 
@@ -1248,7 +1248,7 @@ FIG_allele.zal2m.cpgc <-  ggplot(dfcg.polyc2m, aes(x=position.1, y=per.meth*100,
 FIG_nestling.boxes <- 
   arrangeGrob(FIG_allele.c, FIG_allele.sharedcpgc, print(FIG_allele.zal2.cpgc), print(FIG_allele.zal2m.cpgc),
                   ncol = 10, nrow = 3, layout_matrix = rbind(c(1,1,1,1,1,1,1,NA,NA,NA), c(2,2,2,2,2,2,2,2,2,2), c(3,3,3,3,4,4,4,4,4,4))) %>%
-  as_ggplot() + draw_plot_label(label = c("A", "B", "C","D"), size = 15,  x = c(0, 0, 0, .4), y = c(1, 0.66, 0.34, 0.34)) # Add labels
+  as_ggplot() + draw_plot_label(label = c("A", "B", "C","D"), size = 15,  x = c(0, 0, 0, .4), y = c(1, 0.66, 0.328, 0.328)) # Add labels
 
 ggsave("FIG_nestbox.tiff", plot = FIG_nestling.boxes, units="in", width=6.5, height=8.25, dpi=300, compression = 'lzw')
 
@@ -1532,7 +1532,7 @@ FIG_cpg.heatmap <- ggplot(data = cds, mapping = aes(x = age, y = Position)) +
         panel.border = element_rect(color = "black", fill = NA, linetype = "solid"),
         plot.background = element_rect(fill = "white"), plot.margin = unit(c(1,1,1,2), "lines"),
         axis.text.y = element_markdown(size = rel(1.3)), axis.title.x = element_blank(),
-        axis.text.x = element_markdown(size = rel(1.75)), axis.title.y = element_markdown(size = rel(1.75)), 
+        axis.text.x = element_markdown(size = rel(1.75), angle = 45, hjust = 1), axis.title.y = element_markdown(size = rel(1.75)), 
         legend.title = element_markdown(size = rel(1.2)), legend.text = element_text(size = rel(1)),
         text = element_text(size = 12.5, color = "black")
         )
@@ -1565,6 +1565,7 @@ colnames(c) = zed
 stats_regs.adults <- c %>%
   as.data.frame() %>%
   tibble::rownames_to_column("Allele")
+
 
 ###   Nestlings   ###
 lmemeans_byallele.c <- function (x) {
@@ -1814,9 +1815,9 @@ FIG_adult.R2map <-
   arrangeGrob(FIG_R2.tsmap.a, FIG_R2.wsmap.a, FIG_R2.mwsmap.a, 
               ncol = 1, nrow = 3,
               layout_matrix = rbind(1,2,3)) %>% 
-  as_ggplot() + draw_plot_label(label = c("A", "B", "C"), size = 20, x = c(0, 0, 0), y = c(1.005, 0.67, 0.338)) # Add labels 
+  as_ggplot() + draw_plot_label(label = c("A", "B", "C"), size = 20, x = c(0, 0, 0), y = c(1.005, 0.674, 0.338)) # Add labels 
 
-ggsave("FIG_regsmap.adult.tiff", plot = FIG_adult.R2map, units="in", width=8.5, height=11, dpi=300, compression = 'lzw')
+ggsave("FIG_regsmap.adult.tiff", plot = FIG_adult.R2map, units="in", width=7, height=8, dpi=300, compression = 'lzw')
 
 
 ## NESTLINGS ##
@@ -1904,7 +1905,7 @@ FIG_nestling.R2map <-
               layout_matrix = rbind(1,2,3)) %>% 
   as_ggplot() + draw_plot_label(label = c("A", "B", "C"), size = 20, x = c(0, 0, 0), y = c(1.005, 0.67, 0.338)) # Add labels 
 
-ggsave("FIG_regsmap.nest.tiff", plot = FIG_nestling.R2map, units="in", width=8.5, height=11, dpi=300, compression = 'lzw')
+ggsave("FIG_regsmap.nest.tiff", plot = FIG_nestling.R2map, units="in", width=7, height=8, dpi=300, compression = 'lzw')
 
 
 
