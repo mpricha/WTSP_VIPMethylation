@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Citing for reference in our publication"
+authors:
+- family-names: "Prichard"
+  given-names: "Mackenzie"
+  orcid: "https://orcid.org/0000-0003-3218-9082"
+title: "WTSP_VIPMethylation"
+version: 1.0
+doi: 
+date-released: 2022-08-05
+url: "https://github.com/mpricha/WTSP_VIPMethylation"
