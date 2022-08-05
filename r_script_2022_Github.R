@@ -43,7 +43,7 @@ results <- paste0(root,"/results")
 ###Load in data
 setwd(root)
 #use the .cov.gz files that Bismark outputs from the "methylation extraction" function
-groups.bs <- read.table("files_manifest.txt", header=TRUE) #read in your sample manifest
+#groups.bs <- read.table("files_manifest.txt", header=TRUE) #read in your sample manifest
 #head(groups) #sanity check
 #ddata <- c()
 #for (x in list.files(pattern = "cov.gz$")) {
@@ -111,7 +111,7 @@ unshared2m2$per.meth <- 0
 unshared2m222m <- bind_rows(unshared22m,unshared2m2)
 unshared <- bind_rows(unshared2m222m, unshared2)
 unshared <- bind_rows(unshared, unshared2m)
-dataCG <- bind_rows(unshared, shared1)
+dataCG.test <- bind_rows(unshared, shared1)
 rm(unshared2, unshared2m, unshared22m, unshared2m2, unshared2m222m, unshared, shared1)
 cpg.t<-unique(dataCG$position.1) #make a list of the cpgs in this data set to check that it's as expected
 dataCG$position.a <- as.numeric(as.character(dataCG$position.1))
@@ -1048,30 +1048,32 @@ setwd(results)
 # overall methylation: adults
 FIG_allele.a <-  ggplot(allele.adult, aes(x=CpGs, y=per.meth*100, color = allele.morph)) + 
   geom_boxplot(aes(fill=allele.morph), outlier.shape = NA, position = position_dodge(preserve = "single"), show.legend = T) +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), show.legend = T, shape=21, size = 2, alpha = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), 
+             show.legend = T, shape=21, size = 1, alpha = 1) +
   scale_fill_manual(values=c("#CDA434","#2142D7" ,"#CA3500"), name = "Allele", labels = c(
-    "TS-VIP<sup>2</sup>",
-    "WS-VIP<sup>2</sup>",
-    "WS-VIP<sup>2m</sup>"
+    "TS-VIP<sup>  2</sup> (n = 14)",
+    "WS-VIP<sup>  2</sup> (n = 13)",
+    "WS-VIP<sup>  2m</sup> (n = 13)"
   )) + 
   scale_color_manual(values=c("black","black" ,"black"), name = "Allele", labels = c(
-    "TS-VIP<sup>2</sup>",
-    "WS-VIP<sup>2</sup>",
-    "WS-VIP<sup>2m</sup>"
+    "TS-VIP<sup>  2</sup> (n = 14)",
+    "WS-VIP<sup>  2</sup> (n = 13)",
+    "WS-VIP<sup>  2m</sup> (n = 13)"
   )) +
-  scale_y_continuous(name="%5mC Methylation", limits = c(0,17.6))+
-  geom_signif(y_position=c(15.3, 16.8), xmin=c(1, 2), xmax=c(1.25, 2.25), annotation=c("*","*"), tip_length=0, vjust = 0.4, color = "black", textsize=8)+ 
+  scale_y_continuous(name="%5mC Methylation", limits = c(0,19))+
+  geom_signif(y_position=c(15.3, 16.8), xmin=c(1, 2), xmax=c(1.25, 2.25), 
+              annotation=c("*","*"), tip_length=0, vjust = 0.4, color = "black", textsize=6)+ 
   scale_x_discrete(labels = c("per.meth" = "All CpGs","per.meth.s" = "Shared<br>CpGs Only")) +
-  labs(x = " ", fill = "Allele", color = "Allele", title = "*VIP* CRE (Overall)") +
+  labs(x = " ", fill = "Allele", color = "Allele", title = "VIP CRE (Overall)") +
   theme(strip.background = element_rect(fill = "white", linetype = NULL), 
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"),
         plot.background = element_rect(fill = "white"),
-        plot.title = element_markdown(),
+        plot.title = element_text(),
         axis.text.x = element_markdown(size = rel(1.2)), axis.text.y = element_markdown(),
         axis.title.x = element_markdown(margin = margin(t=7)),
         legend.text = element_markdown(size = rel(.9)), legend.title = element_markdown(size = rel(1)),
-        text = element_text(size = 13, color = "black")
+        text = element_text(size = 7, color = "black")
   )
 
 
@@ -1081,21 +1083,23 @@ dfcg.zeda <- adult.dfcg[adult.dfcg$position.1 %in% cpgs_posthoc.a, ]
 
 FIG_allele.sharedcpga <-  ggplot(dfcg.zeda, aes(x=position.1, y=per.meth*100, color = allele.morph)) + 
   geom_boxplot(aes(fill=allele.morph), outlier.shape = NA, position = position_dodge(preserve = "single"), show.legend = F) +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), show.legend = F, shape=21, size = 2, alpha = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), 
+             show.legend = F, shape=21, size = 1, alpha = 1) +
   scale_fill_manual(values=c("#CDA434","#2142D7" ,"#CA3500")) + 
   scale_color_manual(values=c("black","black" ,"black")) +
-  scale_y_continuous(name="%5mC Methylation", limits = c(0,85))+
-  geom_signif(y_position=c(31,21,41,80.5), xmin=c(3,4,6,7), xmax=c(3.25,4.25,6.25,7.25), annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=8)+ 
+  scale_y_continuous(name="%5mC Methylation", limits = c(0,87))+
+  geom_signif(y_position=c(31,21,41,80.5), xmin=c(3,4,6,7), xmax=c(3.25,4.25,6.25,7.25), 
+              annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=6)+ 
   labs(x = "CpG Position", title = "Shared CpGs with a Significant Main Effect of Allele")+
   theme(strip.background = element_rect(fill = "white", linetype = NULL), 
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"),
         plot.background = element_rect(fill = "white"),
-        plot.title = element_markdown(),
-        axis.text.x = element_markdown(size = rel(.95)), axis.text.y = element_markdown(size = rel(1.2)),
+        plot.title = element_text(),
+        axis.text.x = element_markdown(size = rel(1)), axis.text.y = element_markdown(size = rel(1.2)),
         axis.title.x = element_markdown(margin = margin(t=7)),
         legend.text = element_markdown(size = rel(.8)), legend.title = element_markdown(size = rel(.9)),
-        text = element_text(size = 13, color = "black")
+        text = element_text(size = 7, color = "black")
   )
 
 
@@ -1103,81 +1107,93 @@ dfcg.polya2 <- adult.dfcg[adult.dfcg$position.1 %in% cpg.2m, ]
 
 FIG_allele.zal2.cpga <-  ggplot(dfcg.polya2, aes(x=position.1, y=per.meth*100, color = allele.morph)) + 
   geom_boxplot(aes(fill=allele.morph), outlier.shape = NA, position = position_dodge(preserve = "single"), show.legend = F) +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), show.legend = F, shape=21, size = 2, alpha = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), 
+             show.legend = F, shape=21, size = 1, alpha = 1) +
   scale_fill_manual(values=c("#CDA434","#2142D7" ,"#CA3500")) + 
   scale_color_manual(values=c("black","black" ,"black")) +
   scale_y_continuous(name="%5mC Methylation", limits = c(0,25))+
-  geom_signif(y_position=c(13.2,14.4,10.2), xmin=c(1,2,3), xmax=c(1.25,2.25,3.25), annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=8)+ 
-  labs(x = "CpG Position", title = "VIP<sup>2</sup>-only CpGs") +
+  geom_signif(y_position=c(13.2,14.4,10.2), xmin=c(1,2,3), xmax=c(1.25,2.25,3.25), 
+              annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=6)+ 
+  labs(x = "CpG Position", title = "VIP<sup> 2</sup>-only CpGs") +
   theme(strip.background = element_rect(fill = "white", linetype = NULL), 
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"),
         plot.background = element_rect(fill = "white"),
         plot.title = element_markdown(),
-        axis.text.x = element_markdown(size = rel(.95)), axis.text.y = element_markdown(size = rel(1.2)),
+        axis.text.x = element_markdown(size = rel(1)), axis.text.y = element_markdown(size = rel(1.2)),
         axis.title.x = element_markdown(margin = margin(t=7)),
         legend.text = element_markdown(size = rel(.8)), legend.title = element_markdown(size = rel(.9)),
-        text = element_text(size = 13, color = "black")
+        text = element_text(size = 7, color = "black")
   )
 
 dfcg.polya2m <- adult.dfcg[adult.dfcg$position.1 %in% cpg.2, ]
 
 FIG_allele.zal2m.cpga <-  ggplot(dfcg.polya2m, aes(x=position.1, y=per.meth*100, color = allele.morph)) + 
   geom_boxplot(aes(fill=allele.morph), outlier.shape = NA, position = position_dodge(preserve = "single"), show.legend = F) +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), show.legend = F, shape=21, size = 2, alpha = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), 
+             show.legend = F, shape=21, size = 1, alpha = 1) +
   scale_fill_manual(values=c("#CDA434","#2142D7" ,"#CA3500")) + 
   scale_color_manual(values=c("black","black" ,"black")) +
   scale_y_continuous(name="%5mC Methylation", limits = c(0,45))+
-  geom_signif(y_position=c(11.9,25,40,11.3,5.7), xmin=c(1,2,3,4,5), xmax=c(1.25,2.25,3.25,4.25,5.25), annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=8)+ 
-  labs(x = "CpG Position", title = "VIP<sup>2m</sup>-only CpGs")+
+  geom_signif(y_position=c(11.9,25,40,11.3,5.7), xmin=c(1,2,3,4,5), xmax=c(1.25,2.25,3.25,4.25,5.25), 
+              annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=6)+ 
+  labs(x = "CpG Position", title = "VIP<sup> 2m</sup>-only CpGs")+
   theme(strip.background = element_rect(fill = "white", linetype = NULL), 
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"),
         plot.background = element_rect(fill = "white"),
         plot.title = element_markdown(),
-        axis.text.x = element_markdown(size = rel(.95)), axis.text.y = element_markdown(size = rel(1.2)),
+        axis.text.x = element_markdown(size = rel(1)), axis.text.y = element_markdown(size = rel(1.2)),
         axis.title.x = element_markdown(margin = margin(t=7)), axis.title.y = element_blank(),
         legend.text = element_markdown(size = rel(.8)), legend.title = element_markdown(size = rel(.9)),
-        text = element_text(size = 13, color = "black")
+        text = element_text(size = 7, color = "black")
   )
 
 #alternative method of printing multiple plots together
 FIG_adult.boxes <- 
   arrangeGrob(FIG_allele.a, FIG_allele.sharedcpga, FIG_allele.zal2.cpga, FIG_allele.zal2m.cpga,
             ncol = 10, nrow = 3,
-            layout_matrix = rbind(c(1,1,1,1,1,1,1,NA,NA,NA), c(2,2,2,2,2,2,2,2,2,2), c(3,3,3,3,4,4,4,4,4,4))) %>% 
-  as_ggplot() + draw_plot_label(label = c("A", "B", "C","D"), size = 15, x = c(0, 0, 0, .4), y = c(1, 0.6667, 0.328, 0.328)) # Add labels 
-  
-ggsave("FIG_adultbox.tiff", plot = FIG_adult.boxes, units="in", width=6.5, height=8.25, dpi=300, compression = 'lzw')
+            layout_matrix = rbind(c(1,1,1,1,1,1,1,1,NA,NA), c(2,2,2,2,2,2,2,2,2,2), c(3,3,3,3,4,4,4,4,4,4))) %>% 
+  as_ggplot() + draw_plot_label(label = c("A", "B", "C","D"), size = 11, x = c(0, 0, 0, .4), y = c(1, 0.666, 0.325, 0.325)) # Add labels 
+
+ggsave("FIG_adultbox.tiff", plot = FIG_adult.boxes, device = "tiff", units="in", width=3.75, height=5, dpi=600)
+ggsave("FIG_adultbox.pdf", plot = FIG_adult.boxes, device = "pdf", units="in", width=3.75, height=5, dpi=600)
+
+
+
+
+
 
 ## Nestlings ##
 #Overall methylation: nestlings
 FIG_allele.c <-  ggplot(allele.chick, aes(x=CpGs, y=per.meth*100, color = allele.morph)) + 
   geom_boxplot(aes(fill=allele.morph), outlier.shape = NA, position = position_dodge(preserve = "single"), show.legend = T) +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), show.legend = T, shape=21, size = 2, alpha = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), 
+             show.legend = T, shape=21, size = 1, alpha = 1) +
   scale_fill_manual(values=c("#CDA434","#2142D7" ,"#CA3500"), name = "Allele", labels = c(
-    "TS-VIP<sup>2</sup>",
-    "WS-VIP<sup>2</sup>",
-    "WS-VIP<sup>2m</sup>"
+    "TS-VIP<sup> 2</sup> (n = 8)",
+    "WS-VIP<sup> 2</sup> (n = 11)",
+    "WS-VIP<sup> 2m</sup> (n = 11)"
   )) +
   scale_color_manual(values=c("black","black" ,"black"), name = "Allele", labels = c(
-    "TS-VIP<sup>2</sup>",
-    "WS-VIP<sup>2</sup>",
-    "WS-VIP<sup>2m</sup>"
+    "TS-VIP<sup> 2</sup> (n = 8)",
+    "WS-VIP<sup> 2</sup> (n = 11)",
+    "WS-VIP<sup> 2m</sup> (n = 11)"
   )) +
-  scale_y_continuous(name="%5mC Methylation", limits = c(0,11.5))+
-  geom_signif(y_position=c(11.0), xmin=c(2), xmax=c(2.25), annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=8)+ 
+  scale_y_continuous(name="%5mC Methylation", limits = c(0,12.5))+
+  geom_signif(y_position=c(11.0), xmin=c(2), xmax=c(2.25), annotation=c("*"), tip_length=0, 
+              vjust = 0.4, color = "black", textsize=6)+ 
   scale_x_discrete(labels = c("per.meth" = "All CpGs","per.meth.s" = "Shared<br>CpGs Only")) +
   labs(x = " ", fill = "Allele", color = "Allele", size = 14,  title = "VIP CRE (Overall)") +
   theme(strip.background = element_rect(fill = "white", linetype = NULL), 
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"),
         plot.background = element_rect(fill = "white"),
-        plot.title = element_markdown(),
+        plot.title = element_text(),
         axis.text.x = element_markdown(size = rel(1.2)), axis.text.y = element_markdown(),
         axis.title.x = element_markdown(margin = margin(t=7)),
-        legend.text = element_markdown(size = rel(.9)), legend.title = element_markdown(size = rel(1)),
-        text = element_text(size = 13, color = "black")
+        legend.text = element_markdown(size = rel(1)), legend.title = element_markdown(size = rel(1)),
+        text = element_text(size = 7, color = "black")
   )
 
 # shared CpGs: nestlings
@@ -1185,54 +1201,60 @@ dfcg.zedc <- chick.dfcg[chick.dfcg$position.1 %in% cpgs_posthoc.c, ]
 
 FIG_allele.sharedcpgc <- ggplot(dfcg.zedc, aes(x=position.1, y=per.meth*100, color = allele.morph)) + 
   geom_boxplot(aes(fill=allele.morph), outlier.shape = NA, position = position_dodge(preserve = "single"), show.legend = F) +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), show.legend = FALSE, shape=21, size = 2, alpha = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), 
+             show.legend = FALSE, shape=21, size = 1, alpha = 1) +
   scale_fill_manual(values=c("#CDA434","#2142D7" ,"#CA3500")) + 
   scale_color_manual(values=c("black","black" ,"black")) +
-  scale_y_continuous(name="%5mC Methylation", limits = c(0,80))+
-  geom_signif(y_position=c(47,23,55,74,11,10), xmin=c(1,2,3,4,5,6), xmax=c(1.25,2.25,3.25,4.25,5.25,6.25), annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=8)+ 
+  scale_y_continuous(name="%5mC Methylation", limits = c(0,83))+
+  geom_signif(y_position=c(47,23,55,74,11,10), xmin=c(1,2,3,4,5,6), xmax=c(1.25,2.25,3.25,4.25,5.25,6.25), 
+              annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=6)+ 
   labs(x = "CpG Position", title = "Shared CpGs with a Significant Main Effect of Allele")+
   theme(strip.background = element_rect(fill = "white", linetype = NULL), 
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"),
         plot.background = element_rect(fill = "white"),
-        plot.title = element_markdown(),
-        axis.text.x = element_markdown(size = rel(.95)), axis.text.y = element_markdown(),
+        plot.title = element_text(),
+        axis.text.x = element_markdown(size = rel(1)), axis.text.y = element_markdown(),
         axis.title.x = element_markdown(margin = margin(t=7)),
-        legend.text = element_markdown(size = rel(.8)), legend.title = element_markdown(size = rel(.9)),
-        text = element_text(size = 13, color = "black")
+        legend.text = element_markdown(size = rel(1)), legend.title = element_markdown(size = rel(1)),
+        text = element_text(size = 7, color = "black")
   )
   
 dfcg.polyc2 <- chick.dfcg[chick.dfcg$position.1 %in% cpg.2m, ]
 
 FIG_allele.zal2.cpgc <-  ggplot(dfcg.polyc2, aes(x=position.1, y=per.meth*100, color = allele.morph)) + 
   geom_boxplot(aes(fill=allele.morph), outlier.shape = NA, position = position_dodge(preserve = "single"), show.legend = F) +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), show.legend = FALSE, shape=21, size = 2, alpha = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), 
+             show.legend = FALSE, shape=21, size = 1, alpha = 1) +
   scale_fill_manual(values=c("#CDA434","#2142D7" ,"#CA3500"))+ 
   scale_color_manual(values=c("black","black" ,"black")) +
   scale_y_continuous(name="%5mC Methylation", limits = c(0,15))+
-  geom_signif(y_position=c(8.8,7.9,10.9), xmin=c(1,2,3), xmax=c(1.25,2.25,3.25), annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=8)+ 
-  labs(x = "CpG Position", title = "VIP<sup>2</sup>-only CpGs")+
+  geom_signif(y_position=c(8.8,7.9,10.9), xmin=c(1,2,3), xmax=c(1.25,2.25,3.25), 
+              annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=6)+ 
+  labs(x = "CpG Position", title = "VIP<sup> 2</sup>-only CpGs")+
   theme(panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"),
         plot.background = element_rect(fill = "white"),
         plot.title = element_markdown(),
-        axis.text.x = element_markdown(size = rel(.95)), axis.text.y = element_markdown(),
+        axis.text.x = element_markdown(size = rel(1)), axis.text.y = element_markdown(),
         axis.title.x = element_markdown(margin = margin(t=7)),
-        legend.text = element_markdown(size = rel(.8)), legend.title = element_markdown(size = rel(.9)),
-        text = element_text(size = 13, color = "black")
+        legend.text = element_markdown(size = rel(1)), legend.title = element_markdown(size = rel(1)),
+        text = element_text(size = 7, color = "black")
   )
   
 dfcg.polyc2m <- chick.dfcg[chick.dfcg$position.1 %in% cpg.2, ]
 
 FIG_allele.zal2m.cpgc <-  ggplot(dfcg.polyc2m, aes(x=position.1, y=per.meth*100, color = allele.morph)) + 
   geom_boxplot(aes(fill=allele.morph), outlier.shape = NA, position = position_dodge(preserve = "single"), show.legend = F) +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), show.legend = FALSE, shape=21, size = 2, alpha = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75), aes(colour=allele.morph, fill = factor(allele.morph)), 
+             show.legend = FALSE, shape=21, size = 1, alpha = 1) +
   scale_fill_manual(values=c("#CDA434","#2142D7" ,"#CA3500")) + 
   scale_color_manual(values=c("black","black" ,"black")) +
   scale_y_continuous(limits = c(0,50), breaks = c(5,10,15,26.25,49.5)) +
-  scale_y_break(c(17,25.75,26.75,49), ticklabels = NULL) +
-  geom_signif(y_position=c(11,13.6,9.3,15.7,5.8), xmin=c(1,2,3,4,5), xmax=c(1.25,2.25,3.25,4.25,5.25), annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=8)+ 
-  labs(x = "CpG Position", title = "VIP<sup>2m</sup>-only CpGs")+
+  scale_y_break(c(17.6,25.75,26.75,49), ticklabels = NULL) +
+  geom_signif(y_position=c(11,13.6,9.3,15.7,5.8), xmin=c(1,2,3,4,5), xmax=c(1.25,2.25,3.25,4.25,5.25), 
+              annotation=c("*"), tip_length=0, vjust = 0.4, color = "black", textsize=6)+ 
+  labs(x = "CpG Position", title = "VIP<sup> 2m</sup>-only CpGs")+
   theme(panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"),
         plot.background = element_rect(fill = "white"),
@@ -1240,17 +1262,17 @@ FIG_allele.zal2m.cpgc <-  ggplot(dfcg.polyc2m, aes(x=position.1, y=per.meth*100,
         axis.text.x = element_markdown(size = rel(.95)), axis.text.y = element_markdown(),
         axis.title.x = element_markdown(margin = margin(t=0),hjust = .6), axis.title.y = element_blank(), 
         axis.text.y.right = element_blank(), axis.ticks.y.right = element_blank(), axis.line.y.right = element_blank(),
-        legend.text = element_markdown(size = rel(.8)), legend.title = element_markdown(size = rel(.9)),
-        text = element_text(size = 13, color = "black")
+        legend.text = element_markdown(size = rel(1)), legend.title = element_markdown(size = rel(1)),
+        text = element_text(size = 7, color = "black")
   )
 
 #stitch the plots together
 FIG_nestling.boxes <- 
   arrangeGrob(FIG_allele.c, FIG_allele.sharedcpgc, print(FIG_allele.zal2.cpgc), print(FIG_allele.zal2m.cpgc),
-                  ncol = 10, nrow = 3, layout_matrix = rbind(c(1,1,1,1,1,1,1,NA,NA,NA), c(2,2,2,2,2,2,2,2,2,2), c(3,3,3,3,4,4,4,4,4,4))) %>%
-  as_ggplot() + draw_plot_label(label = c("A", "B", "C","D"), size = 15,  x = c(0, 0, 0, .4), y = c(1, 0.66, 0.328, 0.328)) # Add labels
-
-ggsave("FIG_nestbox.tiff", plot = FIG_nestling.boxes, units="in", width=6.5, height=8.25, dpi=300, compression = 'lzw')
+                  ncol = 10, nrow = 3, layout_matrix = rbind(c(1,1,1,1,1,1,1,1,NA,NA), c(2,2,2,2,2,2,2,2,2,2), c(3,3,3,3,4,4,4,4,4,4))) %>%
+  as_ggplot() + draw_plot_label(label = c("A", "B", "C","D"), size = 11,  x = c(0, 0, 0, .4), y = c(1, 0.666, 0.328, 0.328)) # Add labels
+ggsave("FIG_nestbox.tiff", plot = FIG_nestling.boxes, device = "tiff", units="in", width=3.75, height=5, dpi=600)
+ggsave("FIG_nestbox.pdf", plot = FIG_nestling.boxes, device = "pdf", units="in", width=3.75, height=5, dpi=600)
 
 #cleanup
 rm(dfcg.zeda, dfcg.zedc, dfcg.polya2m, dfcg.polya2, dfcg.polyc2, dfcg.polyc2m,
@@ -1266,19 +1288,19 @@ r <- adult.dfcg[adult.dfcg$position.1 %in% cpg.shared,]
 q <- unique(r$distfromTSSn)
 k <- data.frame(
   x = q,
-  y = rep(-2.8, 66)
+  y = rep(-2.7, 66)
 )
 r <- adult.dfcg[adult.dfcg$position.1 %in% cpg.2,]
 q <- unique(r$distfromTSSn)
 l <- data.frame(
   x = q,
-  y = rep(-2.8, 5)
+  y = rep(-2.7, 5)
 )
 r <- adult.dfcg[adult.dfcg$position.1 %in% cpg.2m,]
 q <- unique(r$distfromTSSn)
 m <- data.frame(
   x = q,
-  y = rep(-2.8, 3)
+  y = rep(-2.7, 3)
 )
 
 #ALL three alleles on the same map
@@ -1304,7 +1326,7 @@ mean(adult.dfcg.r$per.meth)
 
 FIG_adultmapthree <- ggplot(data = adult.dfcg.r, aes(x=distfromTSSn, y=per.meth*100))+
   stat_smooth(data = adult.dfcg.r,method="loess",span=0.3, se=F, aes(fill=allele.morph, color = allele.morph), alpha=0.4) +
-  geom_point(data = adult.dfcg.r,shape=21, size = 1, mapping=aes(fill=allele.morph, color = allele.morph), show.legend = T) +  
+  geom_point(data = adult.dfcg.r,shape=21, size = .75, mapping=aes(fill=allele.morph, color = allele.morph), show.legend = T) +  
   scale_color_manual(values=c("#CDA434","#2142D7" ,"#CA3500"), name = "Allele", labels = c(
     "TS-VIP<sup>2</sup>",
     "WS-VIP<sup>2</sup>",
@@ -1324,17 +1346,18 @@ FIG_adultmapthree <- ggplot(data = adult.dfcg.r, aes(x=distfromTSSn, y=per.meth*
         axis.line = element_line(color = "black"), axis.ticks.x = element_blank(),
         legend.background = element_rect(color = "black", fill = "white"), legend.position = c(0.9,0.7), legend.text = element_markdown(),
         axis.text.x = element_markdown(), axis.text.y = element_markdown(),
-        text = element_text(size = 17, color = "black")) +
+        text = element_text(size = 12, color = "black")) +
   geom_rug(sides="b", color= "black") +
-  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 2, color = "black") +
-  geom_point(data = l, aes(x=x, y=y), shape = 19, size = 2, color = "#CA3500") +
-  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 2, color = "#2142D7") +
+  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 1, color = "black") +
+  geom_point(data = l, aes(x=x, y=y), shape = 19, size = 1, color = "#CA3500") +
+  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 1, color = "#2142D7") +
   annotate("segment", x = 0, y = -7, xend = 0, yend = 0) +
   annotate("segment", x = 0, y = 0, xend = 30, yend = 0, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 4, fontface = "bold") +
+  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 3, fontface = "bold") +
   coord_cartesian(xlim = c(-1250,0) ,clip = 'off')  # This keeps the labels from disappearing
 
-ggsave("FIG_adultmapthree.tiff", plot = FIG_adultmapthree, units="in", width=12, height=4.2, dpi=300, compression = 'lzw')
+ggsave("FIG_adultmapthree.tiff", device = "tiff", plot = FIG_adultmapthree, units="in", width=7.5, height=2.5, dpi=600)
+ggsave("FIG_adultmapthree.pdf", device = "pdf", plot = FIG_adultmapthree, units="in", width=7.5, height=2.5, dpi=600)
 
 
 ## Nestlings ##
@@ -1357,7 +1380,7 @@ mean(chick.dfcg.r$per.meth)
 
 FIG_chickmapthree <- ggplot(data = chick.dfcg.r, aes(x=distfromTSSn, y=per.meth*100))+
   stat_smooth(data = chick.dfcg.r,method="loess",span=0.3, se=F, aes(fill=allele.morph, color = allele.morph), alpha=0.4) +
-  geom_point(data = chick.dfcg.r,shape=21, size = 1, mapping=aes(fill=allele.morph, color = allele.morph), show.legend = T) +  
+  geom_point(data = chick.dfcg.r,shape=21, size = .75, mapping=aes(fill=allele.morph, color = allele.morph), show.legend = T) +  
   scale_color_manual(values=c("#CDA434","#2142D7" ,"#CA3500"), name = "Allele", labels = c(
     "TS-VIP<sup>2</sup>",
     "WS-VIP<sup>2</sup>",
@@ -1377,17 +1400,18 @@ FIG_chickmapthree <- ggplot(data = chick.dfcg.r, aes(x=distfromTSSn, y=per.meth*
         axis.line = element_line(color = "black"), axis.ticks.x = element_blank(),
         legend.background = element_rect(color = "black", fill = "white"), legend.position = c(0.9,0.7), legend.text = element_markdown(),
         axis.text.x = element_markdown(), axis.text.y = element_markdown(),
-        text = element_text(size = 17, color = "black")) +
+        text = element_text(size = 12, color = "black")) +
   geom_rug(sides="b", color= "black") +
-  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 2, color = "black") +
-  geom_point(data = l, aes(x=x, y=y), shape = 19, size = 2, color = "#CA3500") +
-  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 2, color = "#2142D7") +
+  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 1, color = "black") +
+  geom_point(data = l, aes(x=x, y=y), shape = 19, size = 1, color = "#CA3500") +
+  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 1, color = "#2142D7") +
   annotate("segment", x = 0, y = -7, xend = 0, yend = 0) +
   annotate("segment", x = 0, y = 0, xend = 30, yend = 0, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 4, fontface = "bold") +
+  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 3, fontface = "bold") +
   coord_cartesian(xlim = c(-1250,0) ,clip = 'off')  # This keeps the labels from disappearing
 
-ggsave("FIG_nestmapthree.tiff", plot = FIG_chickmapthree, units="in", width=12, height=4.2, dpi=300, compression = 'lzw')
+ggsave("FIG_nestmapthree.tiff", device = "tiff", plot = FIG_chickmapthree, units="in", width=7.5, height=2.5, dpi=600)
+ggsave("FIG_nestmapthree.pdf", device = "pdf", plot = FIG_chickmapthree, units="in", width=7.5, height=2.5, dpi=600)
 
 rm(a,b,c,d,e,f,g,h,i,j)
 
@@ -1492,7 +1516,7 @@ sigcds2 <- data.frame(
 
 labscds.2m <- data.frame(
   facets = "WS-VIP<sup>2</sup><br>vs. TS-VIP<sup>2</sup>",
-  x = c(-.55),
+  x = c(-.8),
   y = cpg.2,
   xend = c(.4),
   yend = cpg.2
@@ -1500,7 +1524,7 @@ labscds.2m <- data.frame(
 
 labscds.2 <- data.frame(
   facets = "WS-VIP<sup>2</sup><br>vs. TS-VIP<sup>2</sup>",
-  x = c(-.55),
+  x = c(-.8),
   y = cpg.2m,
   xend = c(.4),
   yend = cpg.2m
@@ -1520,24 +1544,26 @@ FIG_cpg.heatmap <- ggplot(data = cds, mapping = aes(x = age, y = Position)) +
   scale_y_discrete(limits=rev)+
   labs(x = "Age", y = "Position", fill = "Cohen's d<br>(right)") +
   #asterisks at significant post-hoc tests
-  geom_text(data = sigcds, aes(x = x, y = y, label = text), nudge_y = -.35, size = 10, color = "black") +
-  geom_text(data = sigcds2, aes(x = x, y = y, label = text), nudge_y = -.35, size = 10, color = "white") +
+  geom_text(data = sigcds, aes(x = x, y = y, label = text), nudge_y = -.35, size = 5, color = "black") +
+  geom_text(data = sigcds2, aes(x = x, y = y, label = text), nudge_y = -.35, size = 5, color = "white") +
   #highlights for polymorphic sites
   coord_cartesian(xlim = c(1,2) ,clip = 'off') +  # This keeps the labels from disappearing
-  geom_segment(data = labscds.2m, aes(x = x, y = y, xend = xend, yend = yend), color = "#CA3500", size = 5, alpha = 0.5) + 
-  geom_segment(data = labscds.2, aes(x = x, y = y, xend = xend, yend = yend), color = "#2142D7", size = 5, alpha = 0.5) +
-  theme(strip.background = element_rect(fill = "white", linetype = NULL), strip.text = element_markdown(size = rel(1.5)),
+  geom_segment(data = labscds.2m, aes(x = x, y = y, xend = xend, yend = yend), color = "#CA3500", size = 3.75, alpha = 0.5) + 
+  geom_segment(data = labscds.2, aes(x = x, y = y, xend = xend, yend = yend), color = "#2142D7", size = 3.75, alpha = 0.5) +
+  theme(strip.background = element_rect(fill = "white", linetype = NULL), strip.text = element_markdown(size = rel(1.2)),
         panel.background = element_rect(fill = "white"),
         panel.grid.major.y = element_line(color = "grey", linetype = "dashed"), 
         panel.border = element_rect(color = "black", fill = NA, linetype = "solid"),
-        plot.background = element_rect(fill = "white"), plot.margin = unit(c(1,1,1,2), "lines"),
+        plot.background = element_rect(fill = "white"), plot.margin = unit(c(0,0,0,1), "lines"),
         axis.text.y = element_markdown(size = rel(1.3)), axis.title.x = element_blank(),
-        axis.text.x = element_markdown(size = rel(1.75), angle = 45, hjust = 1), axis.title.y = element_markdown(size = rel(1.75)), 
-        legend.title = element_markdown(size = rel(1.2)), legend.text = element_text(size = rel(1)),
-        text = element_text(size = 12.5, color = "black")
+        axis.text.x = element_markdown(size = rel(1.75), angle = 45, hjust = 1), axis.title.y = element_markdown(size = rel(2)), 
+        legend.title = element_markdown(size = rel(1.5)), legend.text = element_text(size = rel(1.4)),
+        text = element_text(size = 7, color = "black")
         )
   
-ggsave("FIG_cpg.heatmap.tiff", plot = FIG_cpg.heatmap, units="in", width=6.5, height=16.5, dpi=300, compression = 'lzw')
+ggsave("FIG_cpg.heatmap.tiff", device = "tiff",plot = FIG_cpg.heatmap, units="in", width=3.75, height=10, dpi=600)
+ggsave("FIG_cpg.heatmap.pdf", device = "pdf",plot = FIG_cpg.heatmap, units="in", width=3.75, height=10, dpi=600)
+
 
 rm(a,b,c,d,e,f,g,h,i,j,k)
 rm(labscds.2, labscds.2m, sigcds, sigcds2)
@@ -1740,24 +1766,24 @@ FIG_R2.tsmap.a <- ggplot(cpgR_tsa3, aes(x=distfromTSSn, y=R2))+
   scale_fill_manual(values=c("#375590","#CF0A27", "black"))+
   scale_x_continuous(breaks = c(-2000, -1500, -1000, -500, 0)) +
   scale_y_continuous(limits=c(-0.1,1.05), expand = c(0, 0), breaks = seq(-.5, 1, 0.5))+
-  labs(x = NULL, y = "R^2", title = "TS-VIP^2") +
+  labs(x = NULL, y = "R^2", title = "TS-VIP<sup> 2</sup> (n = 12)") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"), axis.ticks.x = element_blank(),
         plot.margin = unit(c(0,1,0,0), "lines"), # This widens the right margin
         plot.title = element_markdown(), axis.title.y = element_markdown(),
-        text = element_text(colour = "black", size = 15)
+        text = element_text(colour = "black", size = 7)
         )+
   #signifiance Rs
-  geom_text(data = R_sigs, aes(x = x, y = y, label = text), size = 7, color = "black") +
+  geom_text(data = R_sigs, aes(x = x, y = y, label = text), size = 4, color = "black") +
   #lolipops
   geom_rug(sides="b",color="black") +
-  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 3, color = "black") +
-  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 3, color = "#2142D7") +
+  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 1, color = "black") +
+  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 1, color = "#2142D7") +
   #TSS note
   annotate("segment", x = 0, y = -0.1, xend = 0, yend = 0) +
   annotate("segment", x = 0, y = 0, xend = 30, yend = 0, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 4, fontface = "bold") +
+  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 2, fontface = "bold") +
   coord_cartesian(xlim = c(-1250,0), ylim = c(-0.1,1.05), clip = 'off')  # This keeps the labels from disappearing
 
 
@@ -1768,22 +1794,22 @@ FIG_R2.wsmap.a <- ggplot(cpgR_ws2a3, aes(x=distfromTSSn, y=R2))+
   scale_fill_manual(values=c("#375590","#CF0A27", "black"))+
   scale_x_continuous(breaks = c(-2000, -1500, -1000, -500, 0)) +
   scale_y_continuous(limits=c(-0.1,1), expand = c(0, 0), breaks = seq(-.5, 1, 0.5))+
-  labs(x = NULL, y = "R^2", title = "WS-VIP^2") +
+  labs(x = NULL, y = "R^2", title = "WS-VIP<sup> 2</sup> (n = 12)") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"), axis.ticks.x = element_blank(),
         plot.margin = unit(c(0,1,0,0), "lines"), # This widens the right margin
         plot.title = element_markdown(), axis.title.y = element_markdown(),
-        text = element_text(colour = "black", size = 15)
+        text = element_text(colour = "black", size = 7)
   )+
   #lolipops
   geom_rug(sides="b",color="black") +
-  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 3, color = "black") +
-  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 3, color = "#2142D7") +
+  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 1, color = "black") +
+  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 1, color = "#2142D7") +
   #TSS note
   annotate("segment", x = 0, y = -0.1, xend = 0, yend = 0) +
   annotate("segment", x = 0, y = 0, xend = 30, yend = 0, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 4, fontface = "bold") +
+  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 2, fontface = "bold") +
   coord_cartesian(xlim = c(-1250,0), ylim = c(-0.1,1.05), clip = 'off')  # This keeps the labels from disappearing
 
 FIG_R2.mwsmap.a <- ggplot(cpgR_ws2ma3, aes(x=distfromTSSn, y=R2))+
@@ -1793,31 +1819,32 @@ FIG_R2.mwsmap.a <- ggplot(cpgR_ws2ma3, aes(x=distfromTSSn, y=R2))+
   scale_fill_manual(values=c("#375590","#CF0A27", "black"))+
   scale_x_continuous(breaks = c(-2000, -1500, -1000, -500, 0)) +
   scale_y_continuous(limits=c(-0.1,1), expand = c(0, 0), breaks = seq(-.5, 1, 0.5))+
-  labs(x = NULL, y = "R^2", title = "WS-VIP^2m") +
+  labs(x = NULL, y = "R^2", title = "WS-VIP<sup> 2m</sup> (n = 12)") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"), axis.ticks.x = element_blank(),
         plot.margin = unit(c(0,1,0,0), "lines"), # This widens the right margin
         plot.title = element_markdown(), axis.title.y = element_markdown(),
-        text = element_text(colour = "black", size = 15)
+        text = element_text(colour = "black", size = 7)
   )+
   #lolipops
   geom_rug(sides="b",color="black") +
-  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 3, color = "black") +
-  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 3, color = "#2142D7") +
+  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 1, color = "black") +
+  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 1, color = "#2142D7") +
   #TSS note
   annotate("segment", x = 0, y = -0.1, xend = 0, yend = 0) +
   annotate("segment", x = 0, y = 0, xend = 30, yend = 0, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 4, fontface = "bold") +
+  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 2, fontface = "bold") +
   coord_cartesian(xlim = c(-1250,0), ylim = c(-0.1,1.05), clip = 'off')  # This keeps the labels from disappearing
 
 FIG_adult.R2map <- 
   arrangeGrob(FIG_R2.tsmap.a, FIG_R2.wsmap.a, FIG_R2.mwsmap.a, 
               ncol = 1, nrow = 3,
               layout_matrix = rbind(1,2,3)) %>% 
-  as_ggplot() + draw_plot_label(label = c("A", "B", "C"), size = 20, x = c(0, 0, 0), y = c(1.005, 0.674, 0.338)) # Add labels 
+  as_ggplot() + draw_plot_label(label = c("A", "B", "C"), size = 10, x = c(0, 0, 0), y = c(1.005, 0.674, 0.338)) # Add labels 
 
-ggsave("FIG_regsmap.adult.tiff", plot = FIG_adult.R2map, units="in", width=7, height=8, dpi=300, compression = 'lzw')
+ggsave("FIG_regsmap.adult.tiff", device = "tiff", plot = FIG_adult.R2map, units="in", width=3.75, height=4.5, dpi=600)
+ggsave("FIG_regsmap.adult.pdf", device = "pdf", plot = FIG_adult.R2map, units="in", width=3.75, height=4.5, dpi=600)
 
 
 ## NESTLINGS ##
@@ -1828,22 +1855,22 @@ FIG_R2.tsmap.c <- ggplot(cpgR_tsc3, aes(x=distfromTSSn, y=R2))+
   scale_fill_manual(values=c("#375590","#CF0A27", "black"))+
   scale_x_continuous(breaks = c(-2000, -1500, -1000, -500, 0)) +
   scale_y_continuous(limits=c(-0.1,1.05), expand = c(0, 0), breaks = seq(-.5, 1, 0.5))+
-  labs(x = NULL, y = "R^2", title = "TS-VIP^2") +
+  labs(x = NULL, y = "R^2", title = "TS-VIP<sup> 2</sup> (n = 7)") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"), axis.ticks.x = element_blank(),
         plot.margin = unit(c(0,1,0,0), "lines"), # This widens the right margin
         plot.title = element_markdown(), axis.title.y = element_markdown(),
-        text = element_text(colour = "black", size = 15)
+        text = element_text(colour = "black", size = 7)
   )+
   #lolipops
   geom_rug(sides="b",color="black") +
-  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 3, color = "black") +
-  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 3, color = "#2142D7") +
+  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 1, color = "black") +
+  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 1, color = "#2142D7") +
   #TSS note
   annotate("segment", x = 0, y = -0.1, xend = 0, yend = 0) +
   annotate("segment", x = 0, y = 0, xend = 30, yend = 0, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 4, fontface = "bold") +
+  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 2, fontface = "bold") +
   coord_cartesian(xlim = c(-1250,0), ylim = c(-0.1,1.05), clip = 'off')  # This keeps the labels from disappearing
 
 
@@ -1854,22 +1881,22 @@ FIG_R2.wsmap.c <- ggplot(cpgR_ws2c3, aes(x=distfromTSSn, y=R2))+
   scale_fill_manual(values=c("#375590","#CF0A27", "black"))+
   scale_x_continuous(breaks = c(-2000, -1500, -1000, -500, 0)) +
   scale_y_continuous(limits=c(-0.1,1), expand = c(0, 0), breaks = seq(-.5, 1, 0.5))+
-  labs(x = NULL, y = "R^2", title = "WS-VIP^2") +
+  labs(x = NULL, y = "R^2", title = "WS-VIP<sup> 2</sup> (n = 11)") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"), axis.ticks.x = element_blank(),
         plot.margin = unit(c(0,1,0,0), "lines"), # This widens the right margin
         plot.title = element_markdown(), axis.title.y = element_markdown(),
-        text = element_text(colour = "black", size = 15)
+        text = element_text(colour = "black", size = 7)
   )+
   #lolipops
   geom_rug(sides="b",color="black") +
-  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 3, color = "black") +
-  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 3, color = "#2142D7") +
+  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 1, color = "black") +
+  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 1, color = "#2142D7") +
   #TSS note
   annotate("segment", x = 0, y = -0.1, xend = 0, yend = 0) +
   annotate("segment", x = 0, y = 0, xend = 30, yend = 0, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 4, fontface = "bold") +
+  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 2, fontface = "bold") +
   coord_cartesian(xlim = c(-1250,0), ylim = c(-0.1,1.05), clip = 'off')  # This keeps the labels from disappearing
 
 
@@ -1880,22 +1907,22 @@ FIG_R2.mwsmap.c <- ggplot(cpgR_ws2mc3, aes(x=distfromTSSn, y=R2))+
   scale_fill_manual(values=c("#375590","#CF0A27", "black"))+
   scale_x_continuous(breaks = c(-2000, -1500, -1000, -500, 0)) +
   scale_y_continuous(limits=c(-0.1,1), expand = c(0, 0), breaks = seq(-.5, 1, 0.5))+
-  labs(x = NULL, y = "R^2", title = "WS-VIP^2m") +
+  labs(x = NULL, y = "R^2", title = "WS-VIP<sup> 2m</sup> (n=11)") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
         panel.background = element_rect(fill = "white"),
         axis.line = element_line(color = "black"), axis.ticks.x = element_blank(),
         plot.margin = unit(c(0,1,0,0), "lines"), # This widens the right margin
         plot.title = element_markdown(), axis.title.y = element_markdown(),
-        text = element_text(colour = "black", size = 15)
+        text = element_text(colour = "black", size = 7)
   )+
   #lolipops
   geom_rug(sides="b",color="black") +
-  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 3, color = "black") +
-  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 3, color = "#2142D7") +
+  geom_point(data = k, aes(x=x, y=y), shape = 21, size = 1, color = "black") +
+  geom_point(data = m, aes(x=x, y=y), shape = 19, size = 1, color = "#2142D7") +
   #TSS note
   annotate("segment", x = 0, y = -0.1, xend = 0, yend = 0) +
   annotate("segment", x = 0, y = 0, xend = 30, yend = 0, arrow = arrow(type = "closed", length = unit(0.02, "npc"))) +
-  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 4, fontface = "bold") +
+  annotate("text", x=25, y=0, label = "TSS", hjust = -.1, color = "black", size = 2, fontface = "bold") +
   coord_cartesian(xlim = c(-1250,0), ylim = c(-0.1,1.05), clip = 'off')  # This keeps the labels from disappearing
 
 
@@ -1903,9 +1930,10 @@ FIG_nestling.R2map <-
   arrangeGrob(FIG_R2.tsmap.c, FIG_R2.wsmap.c, FIG_R2.mwsmap.c,  
               ncol = 1, nrow = 3,
               layout_matrix = rbind(1,2,3)) %>% 
-  as_ggplot() + draw_plot_label(label = c("A", "B", "C"), size = 20, x = c(0, 0, 0), y = c(1.005, 0.67, 0.338)) # Add labels 
+  as_ggplot() + draw_plot_label(label = c("A", "B", "C"), size = 10, x = c(0, 0, 0), y = c(1.005, 0.67, 0.338)) # Add labels 
 
-ggsave("FIG_regsmap.nest.tiff", plot = FIG_nestling.R2map, units="in", width=7, height=8, dpi=300, compression = 'lzw')
+ggsave("FIG_regsmap.nest.tiff", device = "tiff",plot = FIG_nestling.R2map, units="in", width=3.75, height=4.5, dpi=600)
+ggsave("FIG_regsmap.nest..pdf", device = "pdf",plot = FIG_nestling.R2map, units="in", width=3.75, height=4.5, dpi=600)
 
 
 
@@ -1941,29 +1969,29 @@ stats_cpg.R2 <- rbind(stats_cpg.R2c,stats_cpg.R2a)
 stats_cpg.R2$R2_dir <- (stats_cpg.R2$R2*stats_cpg.R2$coef_est)/abs(stats_cpg.R2$coef_est)
 
 stats_cpg.R2$facets = factor(stats_cpg.R2$allele, labels = c(
-  "TS-VIP^2",
-  "WS-VIP^2",
-  "WS-VIP^2m"
+  "TS-<br>VIP^2",
+  "WS-<br>VIP^2",
+  "WS-<br>VIP^2m"
 ))
 
 r2_sigs <- data.frame(
-  facets = c("TS-VIP^2","TS-VIP^2","TS-VIP^2","TS-VIP^2","TS-VIP^2","TS-VIP^2","TS-VIP^2","TS-VIP^2"),
+  facets = c("TS-<br>VIP^2","TS-<br>VIP^2","TS-<br>VIP^2","TS-<br>VIP^2","TS-<br>VIP^2","TS-<br>VIP^2","TS-<br>VIP^2","TS-<br>VIP^2"),
   x = c("Adult","Adult","Adult","Adult","Adult","Adult","Adult","Adult"),
   y = c("2259300","2259338","2259312","2259341","2259422","2259110","2259296","2259256" ),
   text = c("*","*","*","*","*","*","*","*")
 )
 
 labscds.2m <- data.frame(
-  facets = "TS-VIP^2",
-  x = c(-1.4),
+  facets = "TS-<br>VIP^2",
+  x = c(-2),
   y = cpg.2,
   xend = c(.4),
   yend = cpg.2
 )
 
 labscds.2 <- data.frame(
-  facets = "TS-VIP^2",
-  x = c(-1.4),
+  facets = "TS-<br>VIP^2",
+  x = c(-2),
   y = cpg.2m,
   xend = c(.4),
   yend = cpg.2m
@@ -1975,21 +2003,22 @@ FIG_R2.heatmap <- ggplot(data = stats_cpg.R2, mapping = aes(x = age, y = positio
   labs(y = "Postion", fill = "R^2") +
   scale_fill_gradient2(low = "#025669", mid = "white", high = "#ED760E", limits = c(-1,1)) +
   scale_y_discrete(limits=rev)+
-  geom_text(data = r2_sigs, aes(x = x, y = y, label = text), nudge_y = -.4, size = 10) +
-  theme(strip.background = element_rect(fill = "white", linetype = NULL), strip.text = element_markdown(size = rel(1.1)),
+  geom_text(data = r2_sigs, aes(x = x, y = y, label = text), nudge_y = -.3, size = 5.5) +
+  theme(strip.background = element_rect(fill = "white", linetype = NULL), strip.text = element_markdown(size = rel(1)),
         panel.background = element_rect(fill = "white"), plot.background = element_rect(fill = "white"),
         panel.grid.major.y = element_line(color = "grey", linetype = "dashed"), 
-        panel.border = element_rect(color = "black", fill = NA, linetype = "solid"), plot.margin = unit(c(0,0,0,1), "lines"),
-        axis.text.y = element_markdown(size = rel(1.3)), axis.title.y = element_markdown(size = rel(1.5)),
-        axis.text.x = element_markdown(size = rel(1.2), angle = 45, hjust = 1), axis.title.x = element_blank(),
-        legend.title = element_markdown(size = rel(1.5)), legend.text = element_text(size = rel(.9)),
-        text = element_text(size = 15, color = "black")
+        panel.border = element_rect(color = "black", fill = NA, linetype = "solid"), plot.margin = unit(c(0,0,0,.5), "lines"),
+        axis.text.y = element_markdown(size = rel(1.1)), axis.title.y = element_markdown(size = rel(1.5)),
+        axis.text.x = element_markdown(size = rel(1.3), angle = 45, hjust = 1), axis.title.x = element_blank(),
+        legend.title = element_markdown(size = rel(1.4)), legend.text = element_text(size = rel(1.2)),
+        text = element_text(size = 10, color = "black")
         ) +
   coord_cartesian(xlim = c(1,2) ,clip = 'off') +  # This keeps the labels from disappearing
-  geom_segment(data = labscds.2m, aes(x = x, y = y, xend = xend, yend = yend), color = "#CA3500", size = 6.5, alpha = 0.5) + 
-  geom_segment(data = labscds.2, aes(x = x, y = y, xend = xend, yend = yend), color = "#2142D7", size = 7, alpha = 0.5)
+  geom_segment(data = labscds.2m, aes(x = x, y = y, xend = xend, yend = yend), color = "#CA3500", size = 4, alpha = 0.5) + 
+  geom_segment(data = labscds.2, aes(x = x, y = y, xend = xend, yend = yend), color = "#2142D7", size = 4, alpha = 0.5)
     
-ggsave("FIG_Rheatmap.tiff", plot = FIG_R2.heatmap, units="in", width=6, height=15, dpi=300, compression = 'lzw')
+ggsave("FIG_Rheatmap.tiff", device = "tiff", plot = FIG_R2.heatmap, units="in", width=3.5, height=10, dpi=600)
+ggsave("FIG_Rheatmap.pdf", device = "pdf", plot = FIG_R2.heatmap, units="in", width=3.5, height=10, dpi=600)
 
 
 
